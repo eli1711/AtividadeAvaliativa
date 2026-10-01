@@ -1,0 +1,173 @@
+{"kind":"deck","id":"pr/rgi1ki","name":"Deck"}
+{"kind":"layout","layoutId":"b0d64df9-dd39-4e24-ac55-6ecbd6f48dc6","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"ddb1e5f1-f59e-4c11-9332-ec56bf995fc8","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ljq0g8","slide":1,"title":"Projeto Manutenção Inteligente","textShapes":5}
+{"kind":"textbox","id":"sh/6dkja1ov","slide":1,"text":"Projeto Manutenção Inteligente","textPreview":"Projeto Manutenção Inteligente","textChars":30,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/tgbi5gnm","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"textbox","id":"sh/sf21cb61","slide":1,"text":"Sistema especialista para triagem\nde manutenção industrial","textPreview":"Sistema especialista para triagem | de manutenção industrial","textChars":58,"textLines":2,"bbox":[70,200,1120,180]}
+{"kind":"textbox","id":"sh/ja90z65k","slide":1,"text":"Indústria Atlas\nLógica para IA e Sistemas Baseados em Conhecimento","textPreview":"Indústria Atlas | Lógica para IA e Sistemas Baseados em Conhecimento","textChars":66,"textLines":2,"bbox":[70,430,1120,120]}
+{"kind":"textbox","id":"sh/i90z61oz","slide":1,"text":"Apresentação técnica de 45 minutos","textPreview":"Apresentação técnica de 45 minutos","textChars":34,"textLines":1,"bbox":[70,595,1100,40]}
+{"kind":"notes","id":"nt/ljq0g8","slide":1,"text":"Abertura. Apresentar a Situação de Aprendizagem 02 e a integração das duas UCs. Explicar que o material acompanha uma demonstração real.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/3trh5o","slide":2,"title":"Objetivo e alcance","textShapes":5}
+{"kind":"textbox","id":"sh/tgvyxg3q","slide":2,"text":"Objetivo e alcance","textPreview":"Objetivo e alcance","textChars":18,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/6t4f2lkz","slide":2,"text":"Sintomas observados sustentam hipóteses iniciais e justificadas.","textPreview":"Sintomas observados sustentam hipóteses iniciais e justificadas.","textChars":64,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/7udgvqlk","slide":2,"text":"O chamado evolui por estados explícitos até a inspeção.","textPreview":"O chamado evolui por estados explícitos até a inspeção.","textChars":55,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/gj6x8v21","slide":2,"text":"As regras são pedagógicas e não constituem laudo ou procedimento real.","textPreview":"As regras são pedagógicas e não constituem laudo ou procedimento real.","textChars":70,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/hkfy103m","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/3trh5o","slide":2,"text":"Bloco 1: quatro minutos nos slides 1 a 3. Dar um exemplo de observação e de classificação. Não inventar causas reais ou reparos. Fonte: enunciado, p. 1 e 2.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/4nrhuq","slide":3,"title":"Ambiente e tarefa cognitiva","textShapes":2}
+{"kind":"textbox","id":"sh/47m5o7y9","slide":3,"text":"Ambiente e tarefa cognitiva","textPreview":"Ambiente e tarefa cognitiva","textChars":27,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/36d4f2xo","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"table","id":"tb/r69kjipw","slide":3,"name":"","rows":5,"cols":2,"preview":"Ambiente físico | Representação do protótipo","bbox":[70,170,1140,440]}
+{"kind":"notes","id":"nt/4nrhuq","slide":3,"text":"Distinguir o ambiente físico da representação. O retrato do caso é estático, discreto e processado deterministicamente. MYCIN aproxima-se pela tarefa e arquitetura. Fonte curricular: aula de Fundamentos, p. 8 e 11.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/2e59to","slide":4,"title":"Fonte de conhecimento","textShapes":6}
+{"kind":"textbox","id":"sh/krexsjqx","slide":4,"text":"Fonte de conhecimento","textPreview":"Fonte de conhecimento","textChars":21,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/zq5gze9c","slide":4,"text":"R01: temperatura elevada e corrente elevada sustentam sobrecarga.","textPreview":"R01: temperatura elevada e corrente elevada sustentam sobrecarga.","textChars":65,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/y5wfq98r","slide":4,"text":"R02: vibração elevada e ruído anormal sustentam hipótese mecânica.","textPreview":"R02: vibração elevada e ruído anormal sustentam hipótese mecânica.","textChars":66,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/x4nyx4r6","slide":4,"text":"R03: em bomba, fluxo reduzido e ruído sustentam hipótese hidráulica.","textPreview":"R03: em bomba, fluxo reduzido e ruído sustentam hipótese hidráulica.","textChars":68,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/c3exozql","slide":4,"text":"R04: temperatura, vibração e ruído sustentam condição crítica e prioridade.","textPreview":"R04: temperatura, vibração e ruído sustentam condição crítica e prioridade.","textChars":75,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/b2lgvu90","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/2e59to","slide":4,"text":"Bloco 2: seis minutos nos slides 4 a 6. Mostrar a transcrição da página 2. Explicar que R01 a R04 são produtos da extração, não uma tabela entregue pronta.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/5x2srm","slide":5,"title":"Decisões de modelagem","textShapes":6}
+{"kind":"textbox","id":"sh/v61876x4","slide":5,"text":"Decisões de modelagem","textPreview":"Decisões de modelagem","textChars":21,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/w7up0by9","slide":5,"text":"A repetição reforça a conjunção de todos os sinais de cada regra.","textPreview":"A repetição reforça a conjunção de todos os sinais de cada regra.","textChars":65,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/x83q9wfu","slide":5,"text":"“Vibração sozinha” significa insuficiência de suporte para R02.","textPreview":"“Vibração sozinha” significa insuficiência de suporte para R02.","textChars":63,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/i9c721gf","slide":5,"text":"Compressor com falta de óleo fica sem regra: a fonte não o cobre.","textPreview":"Compressor com falta de óleo fica sem regra: a fonte não o cobre.","textChars":65,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/jul8b6x0","slide":5,"text":"Nenhuma ausência de prova vira uma regra de negação.","textPreview":"Nenhuma ausência de prova vira uma regra de negação.","textChars":52,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/kvup4byl","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/5x2srm","slide":5,"text":"Comparar a leitura como insuficiência com a leitura alternativa de negação universal. Relacionar às orientações O1 a O3. Fonte: enunciado, p. 2 a 4.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/ouxbmx","slide":6,"title":"Separação de ocorrências","textShapes":5}
+{"kind":"textbox","id":"sh/vypor2lw","slide":6,"text":"Separação de ocorrências","textPreview":"Separação de ocorrências","textChars":24,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/wzy50721","slide":6,"text":"C01, C02 e C05 usam o mesmo motor, mas possuem observações distintas.","textPreview":"C01, C02 e C05 usam o mesmo motor, mas possuem observações distintas.","textChars":69,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/xk76tc3m","slide":6,"text":"Cada sintoma recebe o identificador do caso, como temperatura_elevada(c01).","textPreview":"Cada sintoma recebe o identificador do caso, como temperatura_elevada(c01).","textChars":75,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/mtwnuxkz","slide":6,"text":"A variável Caso conecta somente fatos da mesma ocorrência.","textPreview":"A variável Caso conecta somente fatos da mesma ocorrência.","textChars":58,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/nu5on2lk","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/ouxbmx","slide":6,"text":"Explicar o erro que ocorreria se todos os sintomas fossem registrados em motor_m1: o C05 receberia corrente do C01 e vibração e ruído do C02. Mostrar a seção de fatos da base.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/jsfljb","slide":7,"title":"Formalização de R01 e R04","textShapes":6}
+{"kind":"textbox","id":"sh/xojmdo3m","slide":7,"text":"Formalização de R01 e R04","textPreview":"Formalização de R01 e R04","textChars":25,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/al8n294v","slide":7,"text":"R01: (T ∧ C) → S","textPreview":"R01: (T ∧ C) → S","textChars":16,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/vmh4be5g","slide":7,"text":"R04: (T ∧ V ∧ N) → (K ∧ I)","textPreview":"R04: (T ∧ V ∧ N) → (K ∧ I)","textChars":26,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/kba58jmx","slide":7,"text":"K é a classificação crítica. I é o encaminhamento prioritário.","textPreview":"K é a classificação crítica. I é o encaminhamento prioritário.","textChars":62,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/5cj6ho3i","slide":7,"text":"A regra exige todos os sinais, sem provar uma causa física definitiva.","textPreview":"A regra exige todos os sinais, sem provar uma causa física definitiva.","textChars":70,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/ipsn6t47","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/jsfljb","slide":7,"text":"Bloco 3: cinco minutos nos slides 7 e 8. Usar o método de seis passos e a tradução reversa da aula Construindo Expressões. Definir T,V,N,C,S,K,I antes de substituir valores.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/avlxrd","slide":8,"title":"Tabela-verdade de R04","textShapes":6}
+{"kind":"textbox","id":"sh/pgj2tkja","slide":8,"text":"Tabela-verdade de R04","textPreview":"Tabela-verdade de R04","textChars":21,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/its3i50z","slide":8,"text":"Cinco proposições distintas produzem 32 combinações.","textPreview":"Cinco proposições distintas produzem 32 combinações.","textChars":52,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/3e1kra14","slide":8,"text":"O antecedente é verdadeiro em 4 linhas.","textPreview":"O antecedente é verdadeiro em 4 linhas.","textChars":39,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/cjulofi1","slide":8,"text":"A implicação é verdadeira em 29 e falsa em 3 linhas.","textPreview":"A implicação é verdadeira em 29 e falsa em 3 linhas.","textChars":52,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/dk32xkjm","slide":8,"text":"Antecedente falso não ativa a obrigação e não descarta a hipótese.","textPreview":"Antecedente falso não ativa a obrigação e não descarta a hipótese.","textChars":66,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/qhc3mp0v","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/avlxrd","slide":8,"text":"Abrir a tabela completa do dossiê. Explicar que K e I são independentes na enumeração semântica, e por isso há quatro linhas com T,V,N verdadeiros. As três violações têm K ou I falso. Não confundir verdade vacuosa com derivação.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/5w0v5u","slide":9,"title":"Conjunto de conflito do C04","textShapes":3}
+{"kind":"textbox","id":"sh/qpwr6947","slide":9,"text":"Conjunto de conflito do C04","textPreview":"Conjunto de conflito do C04","textChars":27,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/dsna1oni","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"textbox","id":"sh/feps3y5o","slide":9,"text":"As duas provas permanecem disponíveis. A condição crítica orienta a prioridade.","textPreview":"As duas provas permanecem disponíveis. A condição crítica orienta a prioridade.","textChars":79,"textLines":1,"bbox":[70,495,1140,115]}
+{"kind":"table","id":"tb/x07qpwjm","slide":9,"name":"","rows":3,"cols":3,"preview":"Regra | Condições provadas | Resultado","bbox":[70,180,1140,270]}
+{"kind":"notes","id":"nt/5w0v5u","slide":9,"text":"Bloco 4: seis minutos nos slides 9 a 11. Antes da consulta, pedir a previsão do público. As hipóteses são compatíveis. A prioridade é da fonte; a preservação e ordenação são decisões de engenharia.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/z6x301","slide":10,"title":"Quantidade de regras e estado do chamado","textShapes":6}
+{"kind":"textbox","id":"sh/8jq9c725","slide":10,"text":"Quantidade de regras e estado do chamado","textPreview":"Quantidade de regras e estado do chamado","textChars":40,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/7ihsj2lk","slide":10,"text":"Zero provas: Triagem inconclusiva.","textPreview":"Zero provas: Triagem inconclusiva.","textChars":34,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/mh8raxkz","slide":10,"text":"Uma prova: Hipótese identificada.","textPreview":"Uma prova: Hipótese identificada.","textChars":33,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/hojapw32","slide":10,"text":"Mais de uma prova: Hipóteses concorrentes.","textPreview":"Mais de uma prova: Hipóteses concorrentes.","textChars":42,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/gnqtgr2h","slide":10,"text":"O encaminhamento preserva a trilha e a prioridade exigida por R04.","textPreview":"O encaminhamento preserva a trilha e a prioridade exigida por R04.","textChars":66,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/vmhsnmlw","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/z6x301","slide":10,"text":"Explicar que “duas hipóteses” não pode pular o estado de concorrência. Separar estado de classificação e estado posterior de encaminhamento. A FSM não é um diagnóstico.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/4kj95s","slide":11,"title":"Máquina de estados do chamado","textShapes":18}
+{"kind":"textbox","id":"sh/65orut0f","slide":11,"text":"Máquina de estados do chamado","textPreview":"Máquina de estados do chamado","textChars":29,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/t8fa5ojq","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"textbox","id":"sh/s769wjil","slide":11,"text":"Aguardando ocorrência","textPreview":"Aguardando ocorrência","textChars":21,"textLines":1,"bbox":[490,155,300,60]}
+{"kind":"textbox","id":"sh/fahs7y1w","slide":11,"text":"Em triagem","textPreview":"Em triagem","textChars":10,"textLines":1,"bbox":[490,265,300,60]}
+{"kind":"textbox","id":"sh/u9oryt0b","slide":11,"text":"Triagem inconclusiva","textPreview":"Triagem inconclusiva","textChars":20,"textLines":1,"bbox":[65,395,300,60]}
+{"kind":"textbox","id":"sh/hwza98j2","slide":11,"text":"Hipótese identificada","textPreview":"Hipótese identificada","textChars":21,"textLines":1,"bbox":[490,395,300,60]}
+{"kind":"textbox","id":"sh/gvq903ih","slide":11,"text":"Hipóteses concorrentes","textPreview":"Hipóteses concorrentes","textChars":22,"textLines":1,"bbox":[905,395,300,60]}
+{"kind":"textbox","id":"sh/3yhsbyh8","slide":11,"text":"Encaminhado para inspeção","textPreview":"Encaminhado para inspeção","textChars":25,"textLines":1,"bbox":[485,555,330,60]}
+{"kind":"textbox","id":"sh/2x8r2d0n","slide":11,"text":"Encerrado","textPreview":"Encerrado","textChars":9,"textLines":1,"bbox":[960,555,245,60]}
+{"kind":"shape","id":"sh/gzatw3yp","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/h0jup8za","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/uxsbutgj","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/fy1cnyh4","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/4nudk3yl","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/po3ut8f6","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/2lsbydgv","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/3mlcryx0","slide":11,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/crudonyx","slide":11,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ds3uxsfi","slide":11,"text":"registrada","textPreview":"registrada","textChars":10,"textLines":1,"bbox":[805,223,270,32]}
+{"kind":"textbox","id":"sh/l8zuh87m","slide":11,"text":"n = 0","textPreview":"n = 0","textChars":5,"textLines":1,"bbox":[100,327,200,33]}
+{"kind":"textbox","id":"sh/07qt8nq1","slide":11,"text":"n = 1","textPreview":"n = 1","textChars":5,"textLines":1,"bbox":[550,327,180,33]}
+{"kind":"textbox","id":"sh/z6hcfipg","slide":11,"text":"n > 1","textPreview":"n > 1","textChars":5,"textLines":1,"bbox":[995,327,180,33]}
+{"kind":"textbox","id":"sh/y58b6d8v","slide":11,"text":"encaminhar sem\nhipótese","textPreview":"encaminhar sem | hipótese","textChars":23,"textLines":2,"bbox":[230,458,235,60]}
+{"kind":"textbox","id":"sh/9cjuls7i","slide":11,"text":"encaminhar","textPreview":"encaminhar","textChars":10,"textLines":1,"bbox":[660,463,190,40]}
+{"kind":"textbox","id":"sh/8batcnqx","slide":11,"text":"aplicar critério","textPreview":"aplicar critério","textChars":16,"textLines":1,"bbox":[855,463,190,40]}
+{"kind":"textbox","id":"sh/na1cjipc","slide":11,"text":"inspeção\nfinalizada","textPreview":"inspeção | finalizada","textChars":19,"textLines":2,"bbox":[825,510,135,58]}
+{"kind":"textbox","id":"sh/m9sbad87","slide":11,"text":"Coleta complementar retorna à triagem. Inicial: Aguardando ocorrência. Final: Encerrado.","textPreview":"Coleta complementar retorna à triagem. Inicial: Aguardando ocorrência. Final: Encerrado.","textChars":88,"textLines":1,"bbox":[65,637,1150,40]}
+{"kind":"notes","id":"nt/4kj95s","slide":11,"text":"Diagrama editável dos sete estados mínimos. As transições normal e prioritária estão detalhadas no dossiê e no arquivo Prolog. O evento inspecao_finalizada é informado externamente. Coleta complementar retorna à triagem.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/62qa9w","slide":12,"title":"Base declarativa em Prolog","textShapes":6}
+{"kind":"textbox","id":"sh/4by90vih","slide":12,"text":"Base declarativa em Prolog","textPreview":"Base declarativa em Prolog","textChars":26,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/japsrq1w","slide":12,"text":"hipotese(Caso, sobrecarga, r01) :-","textPreview":"hipotese(Caso, sobrecarga, r01) :-","textChars":34,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/i9gryl0b","slide":12,"text":"    temperatura_elevada(Caso),\n    corrente_elevada(Caso).","textPreview":"temperatura_elevada(Caso), |     corrente_elevada(Caso).","textChars":58,"textLines":2,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/d0rax0jy","slide":12,"text":"Fatos descrevem sintomas. A regra produz a hipótese.","textPreview":"Fatos descrevem sintomas. A regra produz a hipótese.","textChars":52,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/szi94vit","slide":12,"text":"A base não usa listas, recursão, corte ou negação.","textPreview":"A base não usa listas, recursão, corte ou negação.","textChars":50,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/ry9svq18","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/62qa9w","slide":12,"text":"Bloco 5: dez minutos nos slides 12 a 15. Mostrar o código real. Explicar cabeça, corpo e variável compartilhada. Fonte curricular: PROLOG_PARTE_1, p. 14 a 21.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/vy6hv3","slide":13,"title":"Consultas de sucesso e falha","textShapes":6}
+{"kind":"textbox","id":"sh/m9kf6x43","slide":13,"text":"Consultas de sucesso e falha","textPreview":"Consultas de sucesso e falha","textChars":28,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/9wby1sne","slide":13,"text":"hipotese(c01, sobrecarga, r01).     Resultado previsto: true.","textPreview":"hipotese(c01, sobrecarga, r01).     Resultado previsto: true.","textChars":61,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/8v2h87m9","slide":13,"text":"hipotese(c05, sobrecarga, r01).     Resultado previsto: false.","textPreview":"hipotese(c05, sobrecarga, r01).     Resultado previsto: false.","textChars":62,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/vytg325k","slide":13,"text":"C01 tem os dois sintomas. C05 informa corrente não elevada.","textPreview":"C01 tem os dois sintomas. C05 informa corrente não elevada.","textChars":59,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/axkzax4z","slide":13,"text":"false significa que a base não forneceu uma prova.","textPreview":"false significa que a base não forneceu uma prova.","textChars":50,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/x0vy5cnq","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/vy6hv3","slide":13,"text":"Executar as duas consultas ao vivo, só depois da predição. Distinguir informação negativa de corrente de ausência de ruído no C06. Não apresentar false como laudo negativo.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/nkivj6","slide":14,"title":"Trace e unificação no C04","textShapes":6}
+{"kind":"textbox","id":"sh/ixw76d4b","slide":14,"text":"Trace e unificação no C04","textPreview":"Trace e unificação no C04","textChars":25,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/5knq183m","slide":14,"text":"R01: temperatura sucede e corrente falha.","textPreview":"R01: temperatura sucede e corrente falha.","textChars":41,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/4zep83m1","slide":14,"text":"R02: vibração e ruído sucedem. Primeira resposta.","textPreview":"R02: vibração e ruído sucedem. Primeira resposta.","textChars":49,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/rmp83ils","slide":14,"text":"O pedido ; retoma a busca. R03 falha no tipo bomba.","textPreview":"O pedido ; retoma a busca. R03 falha no tipo bomba.","textChars":51,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/6lw7ad47","slide":14,"text":"R04 sucede. Segunda resposta: condição crítica.","textPreview":"R04 sucede. Segunda resposta: condição crítica.","textChars":47,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/to7q5s3y","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/nkivj6","slide":14,"text":"Executar leash(-all), trace e hipotese(c04,H,R), pedindo a segunda resposta com ;. Mostrar constante com constante, variável com termo e estrutura com estrutura. Explicar desfazer os vínculos de H e R. Comparar com trace_sucesso_c04.txt.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/hck1dz","slide":15,"title":"Portas do trace e busca","textShapes":6}
+{"kind":"textbox","id":"sh/7uhsvmx4","slide":15,"text":"Portas do trace e busca","textPreview":"Portas do trace e busca","textChars":23,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/svatorep","slide":15,"text":"Call: tentativa de um objetivo. Exit: prova encontrada.","textPreview":"Call: tentativa de um objetivo. Exit: prova encontrada.","textChars":55,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/twjaxwfa","slide":15,"text":"Fail: tentativa sem prova. Redo: retomada para alternativa.","textPreview":"Fail: tentativa sem prova. Redo: retomada para alternativa.","textChars":59,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/i58rihgn","slide":15,"text":"Cláusulas de cima para baixo, objetivos da esquerda para a direita.","textPreview":"Cláusulas de cima para baixo, objetivos da esquerda para a direita.","textChars":67,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/jqhsrmx8","slide":15,"text":"C05 específico não mostra Redo. C04 demonstra as quatro portas.","textPreview":"C05 específico não mostra Redo. C04 demonstra as quatro portas.","textChars":63,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/krq9kryd","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/hck1dz","slide":15,"text":"Abrir trace_falha_c05.txt ou gerar ao vivo. Explicar que a consulta específica de sobrecarga/r01 não possui outra cabeça que possa provar o objetivo. A indexação pode evitar tentativas inúteis, sem alterar os resultados.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/4qpjed","slide":16,"title":"Validação cruzada dos seis casos","textShapes":2}
+{"kind":"textbox","id":"sh/i9kzix4v","slide":16,"text":"Validação cruzada dos seis casos","textPreview":"Validação cruzada dos seis casos","textChars":32,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/5wbytcn6","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"table","id":"tb/107ipkba","slide":16,"name":"","rows":7,"cols":3,"preview":"Caso | Regras provadas | Estado após a triagem","bbox":[70,165,1140,440]}
+{"kind":"notes","id":"nt/4qpjed","slide":16,"text":"Bloco 6: seis minutos nos slides 16 a 18. Mostrar um caso completo em cinco níveis: fonte, fórmula, Prolog, motor e estado. A matriz detalhada no dossiê contém frases e todos os fatos.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/3om94q","slide":17,"title":"Evoluções independentes da base","textShapes":6}
+{"kind":"textbox","id":"sh/fip0zmlg","slide":17,"text":"Evoluções independentes da base","textPreview":"Evoluções independentes da base","textChars":31,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/gjyh8r21","slide":17,"text":"Parte A: ruído acrescentado a C06 permite provar R03.","textPreview":"Parte A: ruído acrescentado a C06 permite provar R03.","textChars":53,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/1k7i1w3m","slide":17,"text":"Parte B: R05 exige bomba, fluxo reduzido e corrente elevada.","textPreview":"Parte B: R05 exige bomba, fluxo reduzido e corrente elevada.","textChars":60,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/6twz2hkz","slide":17,"text":"Só acrescentar R05 não muda C06 sem corrente informada.","textPreview":"Só acrescentar R05 não muda C06 sem corrente informada.","textChars":55,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/ru5gv2lk","slide":17,"text":"Na entrada positiva da Parte B, C06 sustenta obstrução por R05.","textPreview":"Na entrada positiva da Parte B, C06 sustenta obstrução por R05.","textChars":63,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/sveh4725","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/3om94q","slide":17,"text":"Preservar a base original e usar uma sessão para cada versão. Prever antes de consultar. Mostrar base_regra_nova.pl e base_regra_nova_teste.pl, sem misturar com o ruído da Parte A. Cinco linhas da regra de classificação e duas da trilha.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/j2nmjj","slide":18,"title":"Novo caso C07","textShapes":6}
+{"kind":"textbox","id":"sh/hgfixwbi","slide":18,"text":"Novo caso C07","textPreview":"Novo caso C07","textChars":13,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/ud4jm1sr","slide":18,"text":"Bomba B1 com temperatura, vibração, ruído e fluxo reduzido.","textPreview":"Bomba B1 com temperatura, vibração, ruído e fluxo reduzido.","textChars":59,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/vex0v6tc","slide":18,"text":"Previsão: R02, R03 e R04. A corrente não foi informada.","textPreview":"Previsão: R02, R03 e R04. A corrente não foi informada.","textChars":55,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/8bm1kra1","slide":18,"text":"A consulta retorna três hipóteses, com dois pedidos de próxima solução.","textPreview":"A consulta retorna três hipóteses, com dois pedidos de próxima solução.","textChars":71,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/9cvitwb6","slide":18,"text":"Hipóteses concorrentes e encaminhamento para inspeção prioritária.","textPreview":"Hipóteses concorrentes e encaminhamento para inspeção prioritária.","textChars":66,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/m94jihsv","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/j2nmjj","slide":18,"text":"Executar hipotese(c07,H,R) com dois pedidos ;. Relacionar cada resposta aos fatos e à origem das regras. Mostrar a frase de cada trilha e a matriz C07.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/tezdm6","slide":19,"title":"Raciocínio e limites da conclusão","textShapes":6}
+{"kind":"textbox","id":"sh/s7exgra9","slide":19,"text":"Raciocínio e limites da conclusão","textPreview":"Raciocínio e limites da conclusão","textChars":33,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/765g7m9o","slide":19,"text":"Efeito observado para causa possível é inferência abdutiva.","textPreview":"Efeito observado para causa possível é inferência abdutiva.","textChars":59,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/65cfehs3","slide":19,"text":"Indução pode construir associações. A transcrição não descreve essa aquisição.","textPreview":"Indução pode construir associações. A transcrição não descreve essa aquisição.","textChars":78,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/543y5wry","slide":19,"text":"O motor deduz a classificação usando fatos e regras já declarados.","textPreview":"O motor deduz a classificação usando fatos e regras já declarados.","textChars":66,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/k3uxcrad","slide":19,"text":"Mundo fechado: ausência de prova não demonstra ausência da causa.","textPreview":"Mundo fechado: ausência de prova não demonstra ausência da causa.","textChars":65,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/j2lg3m9s","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/tezdm6","slide":19,"text":"Bloco 7: quatro minutos nos slides 19 e 20. O enunciado solicita três formas estudadas, mas nenhuma descreve precisamente a inversão causal. Explicar a aproximação indutiva e a distinção, sem acrescentar conhecimento de domínio.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}
+{"kind":"slide","id":"sl/86264u","slide":20,"title":"Resultados e demonstração final","textShapes":6}
+{"kind":"textbox","id":"sh/hgny10ji","slide":20,"text":"Resultados e demonstração final","textPreview":"Resultados e demonstração final","textChars":31,"textLines":1,"bbox":[65,40,1150,105]}
+{"kind":"textbox","id":"sh/utwz6lk7","slide":20,"text":"298 verificações aprovadas com SWI-Prolog real.","textPreview":"298 verificações aprovadas com SWI-Prolog real.","textChars":47,"textLines":1,"bbox":[70,170,1140,90]}
+{"kind":"textbox","id":"sh/ve5gzq1c","slide":20,"text":"Sete casos, evoluções, 256 provas de antecedentes e onze transições.","textPreview":"Sete casos, evoluções, 256 provas de antecedentes e onze transições.","textChars":68,"textLines":1,"bbox":[70,275,1140,90]}
+{"kind":"textbox","id":"sh/4jyhcvi9","slide":20,"text":"Cada hipótese mantém sua regra e os sintomas que a sustentam.","textPreview":"Cada hipótese mantém sua regra e os sintomas que a sustentam.","textChars":61,"textLines":1,"bbox":[70,380,1140,90]}
+{"kind":"textbox","id":"sh/5k7y50ju","slide":20,"text":"Uma mudança de fato exige nova previsão antes da consulta.","textPreview":"Uma mudança de fato exige nova previsão antes da consulta.","textChars":58,"textLines":1,"bbox":[70,485,1140,90]}
+{"kind":"textbox","id":"sh/ihwza503","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1175,665,40,25]}
+{"kind":"notes","id":"nt/86264u","slide":20,"text":"Quatro minutos reservados para arguição ou dinâmica final. Propor remover temperatura de C04: permanece R02 e desaparece R04. Perguntar o novo estado antes de demonstrar. Sem arguição, usar o tempo para essa atividade, respeitando 40 a 50 minutos. Registros: evidencias/testes.txt e resultados.json.\nFontes: AtividadeAvaliativa].pdf e regras.docx. Consulte Dossie.md para a validação e evidências de execução."}

@@ -1,0 +1,43 @@
+ENTRADA
+leash(-all).
+trace.
+hipotese(c04,H,R).
+;
+notrace.
+halt.
+
+SAÍDA REAL
+true.
+
+true.
+
+   Call: (12) hipotese(c04, _11344, _11346)
+   Call: (13) temperatura_elevada(c04)
+   Exit: (13) temperatura_elevada(c04)
+   Call: (13) corrente_elevada(c04)
+   Fail: (13) corrente_elevada(c04)
+   Redo: (12) hipotese(c04, _11344, _11346)
+   Call: (13) vibracao_elevada(c04)
+   Exit: (13) vibracao_elevada(c04)
+   Call: (13) ruido_anormal(c04)
+   Exit: (13) ruido_anormal(c04)
+   Exit: (12) hipotese(c04, mecanica, r02)
+H = mecanica,
+R = r02    Redo: (12) hipotese(c04, _11344, _11346)
+   Call: (13) ocorrencia(c04, _22784)
+   Exit: (13) ocorrencia(c04, ventilador_v1)
+   Call: (13) equipamento(ventilador_v1, bomba)
+   Fail: (13) equipamento(ventilador_v1, bomba)
+   Redo: (12) hipotese(c04, _11344, _11346)
+   Call: (13) temperatura_elevada(c04)
+   Exit: (13) temperatura_elevada(c04)
+   Call: (13) vibracao_elevada(c04)
+   Exit: (13) vibracao_elevada(c04)
+   Call: (13) ruido_anormal(c04)
+   Exit: (13) ruido_anormal(c04)
+   Exit: (12) hipotese(c04, condicao_critica, r04)
+H = condicao_critica,
+R = r04.
+
+true.
+

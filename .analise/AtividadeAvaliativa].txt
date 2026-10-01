@@ -1,0 +1,396 @@
+=== PAGINA 1 ===
+Situação de Aprendizagem 02 
+Sistema Especialista para Triagem de Ocorrências de Manutenção Industrial 
+Projeto Manutenção Inteligente 
+Curso: Pós-Graduação Lato Sensu em Inteligência Artificial 
+Unidades Curriculares integradas: Lógica para Inteligência Artificial e Sistemas Baseados em Conhecimento 
+Instituição: Faculdade de Tecnologia SENAI Antonio Adolpho Lobbe, São Carlos/SP 
+1. Desafio 
+A Indústria Atlas deseja um protótipo de sistema especialista para apoiar a triagem inicial de ocorrências em 
+equipamentos industriais. O sistema não substitui profissionais de manutenção e não realiza diagnóstico 
+definitivo. Sua função é representar conhecimento explícito sobre sintomas observáveis, aplicar regras para 
+sugerir uma hipótese inicial de ocorrência, justificar essa hipótese e representar, por máquina de estados, a 
+evolução do chamado. 
+O conhecimento não será entregue pronto: a equipe receberá a transcrição de uma conversa com o técnico líder 
+de manutenção e deverá extrair dela os fatos e as regras do sistema. 
+As regras, sintomas e classificações desta situação são simplificações pedagógicas criadas para o projeto. Não 
+devem ser tratadas como procedimentos reais de manutenção, segurança de máquinas ou diagnóstico técnico. 
+Escopo técnico: a implementação utiliza somente os recursos trabalhados na unidade curricular: fatos, regras, 
+variáveis e unificação, consultas, backtracking e leitura de trace. Não é exigido, nem esperado, o uso de listas, 
+recursão, predicados de negação explícita ou qualquer recurso avançado de Prolog. 
+2. Objetivos de aprendizagem 
+ Caracterizar o problema nas duas camadas estudadas: estrutural (ambiente) e cognitiva (tarefa). 
+ Identificar a forma de raciocínio envolvida na passagem de sintoma para causa e explicar por que ela não 
+produz conclusão garantida. 
+ Extrair fatos e regras a partir de conhecimento expresso em linguagem natural, registrando as decisões de 
+modelagem. 
+ Formalizar as regras obtidas em lógica proposicional e verificar sua semântica por tabela-verdade. 
+ Tratar o caso em que mais de uma regra é aplicável ao mesmo conjunto de sintomas. 
+ Modelar o ciclo de uma ocorrência com estados, eventos ou condições e transições. 
+ Distinguir sintomas observados, regras de conhecimento e hipóteses inferidas. 
+ Implementar a base em Prolog, consultá-la e observar o motor de inferência em ação. 
+ Produzir a trilha de explicação de uma hipótese: quais sintomas e qual regra a sustentam. 
+ Interpretar corretamente a presunção de mundo fechado. 
+ Realizar validação cruzada entre fonte textual, lógica proposicional, Prolog e máquina de estados. 
+
+=== PAGINA 2 ===
+3. Arquitetura do sistema 
+O protótipo tem a estrutura de um sistema baseado em conhecimento: o conhecimento fica declarado em uma 
+base, separado do mecanismo que raciocina sobre ele. Os sintomas observados entram como fatos, o motor de 
+inferência procura uma prova e devolve a hipótese acompanhada da trilha que a sustenta. 
+        BASE DE CONHECIMENTO              SINTOMAS OBSERVADOS 
+      regras de triagem do técnico                  | 
+                 |                                  | 
+                 +----> MOTOR DE INFERÊNCIA <-------+ 
+                        unificação + busca 
+                                 | 
+                                 v 
+                HIPÓTESE + TRILHA DE EXPLICAÇÃO 
+                                 | 
+                                 v 
+                 TRANSIÇÃO / PRÓXIMO ESTADO DO CHAMADO 
+4. Equipamentos e sintomas considerados 
+Código Elemento Significado no projeto 
+E01 Motor M1 Motor elétrico do transportador didático. 
+E02 Bomba B1 Bomba do circuito didático. 
+E03 Ventilador V1 Ventilador do sistema didático. 
+S01 Temperatura elevada Temperatura acima da condição de referência informada no 
+caso. 
+S02 Vibração elevada Vibração acima da condição de referência informada no caso. 
+S03 Ruído anormal Ruído identificado como anormal no cenário. 
+S04 Corrente elevada Corrente acima da condição de referência informada no caso. 
+S05 Fluxo reduzido Fluxo abaixo da condição esperada no cenário. 
+5. Fonte de conhecimento fornecida 
+Este é o único material sobre as regras do domínio que a equipe receberá. Não existe uma tabela de regras pronta: 
+o conjunto de regras do sistema é um produto do trabalho da equipe, e duas equipes podem chegar a numerações 
+ou recortes ligeiramente diferentes, desde que preservem o significado do texto e justifiquem cada decisão. 
+Documento fornecido: transcrição de conversa com o técnico líder de manutenção da Indústria Atlas. 
+"Quando o equipamento aparece com temperatura alta junto com corrente alta, 
+a gente trata como suspeita de sobrecarga. Se vier vibração alta e barulho 
+estranho ao mesmo tempo, a suspeita é mecânica; vibração alta sozinha não 
+é suspeita mecânica, precisa vir com o barulho. No caso das bombas, fluxo 
+baixo com barulho estranho aponta para problema hidráulico. E tem o caso 
+pior: temperatura alta, vibração alta e barulho estranho ao mesmo tempo, 
+aí a gente classifica como condição crítica e manda para inspeção 
+prioritária. Repetindo: só classifico se todos os sinais da regra 
+estiverem presentes, um sinal sozinho não decide nada. E nada disso é 
+laudo, é só a triagem inicial para saber para onde mandar o chamado. 
+Ah, sobre compressor com falta de óleo, esse procedimento ainda não 
+cobre compressor." 
+
+=== PAGINA 3 ===
+O trecho acima foi transcrito como o entrevistado falou. Como todo conhecimento obtido de um especialista, ele 
+não é uma especificação formal: contém repetições, uma expressão que admite mais de uma leitura e um assunto 
+deixado em aberto. Identificar e tratar esses três pontos faz parte da atividade e será avaliado. 
+6. Orientações de interpretação 
+As orientações abaixo não são regras do domínio e não devem ser formalizadas como tal. Elas dizem como 
+interpretar os resultados obtidos. 
+# Orientação 
+O1 
+Quando uma regra exige uma condição e essa condição não está disponível na base, os 
+requisitos daquela regra não estão satisfeitos. Isso não cria, por si só, uma regra 
+independente de negação lógica. 
+O2 Uma consulta que não pode ser demonstrada com a base disponível significa "não foi possível 
+provar", e não "é falso no mundo". Esta é a presunção de mundo fechado. 
+O3 Não complete o conhecimento da fonte com suposições próprias. Onde a fonte é omissa, a 
+conclusão correta é que nada é derivável, e essa omissão deve ser registrada. 
+O4 Não altere a regra original para que o código produza o resultado desejado. Se lógica e 
+implementação divergirem, investigue a causa e registre-a. 
+O5 Uma hipótese sugerida pelo protótipo é uma classificação inicial, não um laudo. A trilha de 
+explicação deve deixar isso explícito na frase apresentada ao usuário. 
+7. Casos obrigatórios 
+Caso Equipamento Fatos observados Questão 
+C01 Motor M1 Temperatura elevada; corrente 
+elevada. 
+Alguma regra da base construída sustenta 
+uma hipótese? 
+C02 Motor M1 Vibração elevada; ruído 
+anormal. 
+Alguma regra da base construída sustenta 
+uma hipótese? 
+C03 Bomba B1 Fluxo reduzido; ruído anormal. Alguma regra da base construída sustenta 
+uma hipótese? 
+C04 Ventilador V1 Temperatura elevada; vibração 
+elevada; ruído anormal. 
+Quantas regras da base são aplicáveis a este 
+conjunto de sintomas? O que fazer quando há 
+mais de uma? 
+C05 Motor M1 Temperatura elevada; corrente 
+não elevada. 
+A regra aplicável tem todas as condições 
+satisfeitas? 
+C06 Bomba B1 Fluxo reduzido; sem ruído 
+anormal informado. 
+A regra aplicável tem todas as condições 
+satisfeitas? 
+Atenção ao C04. Ele é o caso central desta situação: mais de uma regra pode ser aplicada ao mesmo conjunto de 
+sintomas. Isso não é erro do enunciado, é uma situação normal em sistemas baseados em regras e precisa ser 
+tratada explicitamente. 
+8. Desenvolvimento 
+Etapa 1: Caracterização do problema 
+Antes de qualquer formalização, classifique o problema nas duas camadas estudadas e justifique cada escolha 
+em uma frase. 
+
+=== PAGINA 4 ===
+Dimensão a analisar Resposta da equipe Justificativa 
+Camada estrutural: observável ou 
+parcialmente observável ... ... 
+Camada estrutural: determinístico ou 
+estocástico ... ... 
+Camada estrutural: estático ou dinâmico ... ... 
+Camada estrutural: discreto ou contínuo ... ... 
+Camada cognitiva: qual tarefa o protótipo 
+realiza ... ... 
+Sistema clássico estudado na primeira aula 
+cuja tarefa mais se aproxima desta ... ... 
+Forma de raciocínio. Observe o sentido da regra "temperatura alta e corrente alta indicam sobrecarga". A 
+sobrecarga é uma causa possível e a temperatura é um efeito. Responda: das três formas de raciocínio estudadas, 
+qual descreve a passagem do efeito observado para a causa provável? Essa forma de raciocínio garante a 
+conclusão? Se a hipótese de sobrecarga for sugerida, isso prova que o equipamento está em sobrecarga? 
+Registre também: uma vez que as regras já estão escritas na base, qual é a forma de raciocínio que o motor de 
+inferência executa ao aplicá-las? É a mesma da pergunta anterior? Explique a diferença entre o raciocínio que o 
+especialista usou para criar a regra e o raciocínio que o sistema usa para aplicá-la. 
+Etapa 2: Extração do conhecimento a partir da fonte 
+Converta o trecho fornecido em conhecimento estruturado. Numere as regras que a equipe decidir adotar e 
+mantenha essa numeração em todo o trabalho. 
+Regra Enunciado da regra (redação da equipe) Trecho da fonte que a origina 
+R01 ... ... 
+R02 ... ... 
+R03 ... ... 
+... ... ... 
+Em seguida, registre as decisões de modelagem. Há na fonte, no mínimo: uma condição repetida em mais de um 
+trecho, uma expressão que admite mais de uma leitura e um assunto sem definição. Localize os três, decida o que 
+fazer com cada um e justifique. 
+Ponto identificado Trecho da fonte Decisão da equipe Justificativa 
+Condição repetida ou 
+redundância ... ... ... 
+Expressão ambígua ... ... ... 
+Assunto sem definição 
+na fonte ... ... ... 
+Outro ponto identificado 
+pela equipe ... ... ... 
+Restrição: nenhuma regra pode conter condição que não esteja sustentada pela fonte. Onde a fonte não define, 
+a equipe declara que nada é derivável, e não preenche a lacuna por conta própria.  
+Etapa 3: Formalização lógica 
+Defina símbolos para as proposições utilizadas e mantenha o mesmo significado durante toda a atividade. 
+Símbolo Significado 
+T Temperatura elevada 
+... ... 
+
+=== PAGINA 5 ===
+Formalize em lógica proposicional cada regra definida na Etapa 2, identificando as proposições simples, os 
+conectivos e a conclusão. 
+Regra Proposições Expressão lógica Interpretação 
+R01 ... ... ... 
+R02 ... ... ... 
+R03 ... ... ... 
+... ... ... ... 
+Exemplo apenas estrutural: (P ∧ Q) → R. Não utilize o exemplo como solução automática das regras do problema. 
+Por fim, faça a verificação semântica de uma das regras. Escolha a regra com maior número de proposições no 
+antecedente, construa a tabela-verdade completa da implicação e responda: em quantas linhas o antecedente é 
+verdadeiro? Em quantas a implicação inteira é verdadeira? O que significa, no domínio do problema, uma linha em 
+que o antecedente é falso e a implicação é verdadeira? 
+Linha Valores das proposições Antecedente Consequente Implicação 
+1 ... ... ... ... 
+2 ... ... ... ... 
+3 ... ... ... ... 
+4 ... ... ... ... 
+... ... ... ... ... 
+Essa verificação é o que distingue conhecer a sintaxe da regra de conhecer o seu significado. Ela deve ser 
+retomada na análise crítica. 
+Etapa 4: Validação lógica dos seis casos e conjunto de conflito 
+Para cada caso C01 a C06, identifique todas as regras aplicáveis, atribua valores às condições e determine se o 
+antecedente de cada uma está satisfeito. Registre o que pode e o que não pode ser inferido, sem transformar 
+ausência de derivação em prova automática da negação. 
+Caso Regras 
+aplicáveis Valores das condições Antecedente 
+satisfeito? Hipóteses sustentadas 
+C01 ... ... ... ... 
+C02 ... ... ... ... 
+C03 ... ... ... ... 
+C04 ... ... ... ... 
+C05 ... ... ... ... 
+C06 ... ... ... ... 
+Conjunto de conflito. No caso em que mais de uma regra é aplicável, o conjunto dessas regras é chamado de 
+conjunto de conflito. A equipe deve responder: 
+ Quais regras estão no conjunto de conflito e quais hipóteses cada uma sustenta? 
+ As hipóteses são compatíveis entre si ou se excluem? 
+ Qual critério a equipe adota para ordenar ou escolher entre elas: a regra com mais condições no antecedente, 
+a mais grave em consequência operacional, a primeira escrita no arquivo, ou outro? Justifique. 
+ O critério adotado é conhecimento do domínio ou decisão de engenharia da equipe? Ele deveria estar na base 
+de conhecimento ou fora dela? 
+Registre a decisão: ela determinará o comportamento do protótipo e a transição da máquina de estados nesse 
+caso. 
+
+=== PAGINA 6 ===
+Etapa 5: Máquina de Estados do chamado de manutenção 
+Modele o comportamento sequencial do processo. A máquina deverá conter estados, estado inicial, eventos ou 
+condições, transições e, quando aplicável, ações associadas. 
+Estados mínimos a considerar: Aguardando ocorrência, Em triagem, Hipótese identificada, Hipóteses 
+concorrentes, Triagem inconclusiva, Encaminhado para inspeção e Encerrado. A equipe poderá propor ajustes, 
+desde que preserve o significado do processo e justifique tecnicamente. 
+Entregue duas representações: (a) diagrama da máquina de estados; (b) tabela de transição. 
+Estado atual Evento ou condição Próximo estado Ação e justificativa 
+Aguardando ocorrência Ocorrência registrada Em triagem Iniciar análise dos sintomas. 
+Em triagem ... ... ... 
+Em triagem ... ... ... 
+... ... ... ... 
+A máquina representa a evolução do chamado; as regras representam as condições que sustentam uma hipótese. 
+Não substitua uma representação pela outra. Observe que o estado alcançado a partir de "Em triagem" depende 
+de quantas regras foram satisfeitas, e não apenas de haver ou não uma hipótese. 
+Etapa 6: Modelagem da base de conhecimento 
+Separe claramente fatos, regras e conclusões inferidas. Modele as informações necessárias para representar o 
+domínio do problema. 
+Elemento O que a equipe representou Por que nesta categoria 
+Fatos declarados ... ... 
+Regras ... ... 
+Conclusões inferidas (não 
+armazenadas) ... ... 
+Responda: por que a hipótese de cada ocorrência não deve ser declarada diretamente como fato? Relacione a 
+resposta à diferença entre sintoma observado e conclusão inferida. 
+Etapa 7: Implementação em Prolog 
+Implemente a base utilizando apenas fatos, regras, variáveis, unificação e consultas. Mantenha o arquivo 
+organizado em seções comentadas. 
+temperatura_elevada(equipamento_x). 
+corrente_elevada(equipamento_x). 
+ 
+hipotese_exemplo(X) :- 
+    temperatura_elevada(X), 
+    corrente_elevada(X). 
+O trecho acima é apenas um exemplo de estrutura e não corresponde à solução do problema. 
+Etapa 8: Predição, consultas e observação do motor de inferência 
+Antes de executar cada consulta, registre o resultado esperado e a justificativa. Depois execute e compare a 
+previsão com o resultado observado. 
+Caso Consulta Resultado previsto Resultado obtido Explicação 
+C01 ... ... ... ... 
+C02 ... ... ... ... 
+
+=== PAGINA 7 ===
+Caso Consulta Resultado previsto Resultado obtido Explicação 
+C03 ... ... ... ... 
+C04 ... ... ... ... 
+C05 ... ... ... ... 
+C06 ... ... ... ... 
+Em seguida, abra o motor de inferência. Escolha um caso que sucede e um caso que falha e documente, para 
+cada um: 
+ as unificações ocorridas, termo a termo, indicando em cada uma qual das três regras de unificação se aplicou 
+(constante com constante, variável com termo, estrutura com estrutura); 
+ a ordem em que os objetivos foram tentados, segundo as duas regras de busca do Prolog: de cima para baixo 
+no arquivo e da esquerda para a direita no corpo da regra; 
+ onde houve backtracking, o que falhou e para onde o motor retornou; 
+ a saída de trace, lida pelas quatro portas do modelo de caixa: Call, Exit, Fail e Redo. 
+Item Caso que sucede Caso que falha 
+Consulta analisada ... ... 
+Unificações e regra de 
+unificação aplicada ... ... 
+Ordem de tentativa dos 
+objetivos ... ... 
+Ocorreu backtracking? Onde 
+e por quê ... ... 
+Leitura do trace (Call, Exit, 
+Fail, Redo) ... ... 
+Feche esta etapa respondendo: no caso que falhou, o Prolog provou que a hipótese é falsa? Explique usando a 
+presunção de mundo fechado. Em seguida, execute a consulta do caso C04 e use o ponto e vírgula para pedir a 
+próxima solução: quantas respostas o motor encontra? O que isso tem a ver com o conjunto de conflito 
+identificado na Etapa 4? 
+Etapa 9: Validação cruzada com trilha de explicação 
+A validação cruzada é obrigatória para TODOS os seis casos fornecidos (C01 a C06) e, posteriormente, para o caso 
+criado pela equipe. Cada linha deve demonstrar a rastreabilidade entre a fonte textual, a lógica proposicional, a 
+consulta em Prolog e a transição resultante, e deve apresentar a justificativa que o sistema daria ao usuário. 
+Caso 
+Regra e 
+expressão 
+lógica 
+Consulta e 
+resultado 
+Fatos e regra que 
+sustentam 
+Frase de justificativa ao 
+usuário 
+Estado 
+resultante e 
+coerência 
+C01 ... ... ... ... ... 
+C02 ... ... ... ... ... 
+C03 ... ... ... ... ... 
+C04 ... ... ... ... ... 
+C05 ... ... ... ... ... 
+C06 ... ... ... ... ... 
+A coluna de justificativa deve ser uma frase completa em linguagem natural, construída a partir dos fatos e da 
+regra efetivamente utilizados. Por exemplo, no formato "hipótese de <categoria> sugerida porque foram 
+observados <sintomas>, conforme a regra <Rxx>; esta é uma triagem inicial e não um laudo" ou "não foi possível 
+sustentar hipótese porque <condição> não foi observada". 
+Se houver divergência entre as representações, investigue pelo menos: interpretação da fonte, formalização 
+lógica, representação dos fatos e regras, implementação e definição da transição. 
+
+=== PAGINA 8 ===
+Etapa 10: Evolução da base de conhecimento 
+Esta etapa tem duas partes independentes. Em ambas, preserve a versão original do programa e registre a previsão 
+antes de executar. 
+Parte A. Alteração de um fato. Escolha um dos casos, altere ou acrescente um sintoma relevante e preveja: (1) o 
+impacto na análise lógica; (2) o comportamento esperado da consulta; (3) o próximo estado do chamado. Um bom 
+experimento é acrescentar um sintoma ao C05 ou ao C06 de modo que a regra passe a ser satisfeita. 
+Parte B. Chegada de uma regra nova. A área responsável comunica a seguinte mudança: 
+"A partir de agora, fluxo reduzido junto com corrente elevada em bomba 
+ também deve ser classificado como suspeita de obstrução." 
+Incorpore essa regra à base sem alterar nenhuma regra já existente. Em seguida responda: quantas linhas foi 
+necessário escrever? Foi preciso reescrever a lógica de decisão? O que isso demonstra sobre a diferença entre 
+representar conhecimento de forma declarativa e escrever a decisão dentro de um procedimento? 
+Etapa 11: Novo caso criado pela equipe (C07) 
+Crie um novo caso utilizando apenas os equipamentos, sintomas e relações sustentados pela fonte. Defina os 
+fatos observados, identifique as regras aplicáveis, formalize, preveja, implemente, consulte, produza a trilha de 
+explicação e determine a transição. O caso será registrado como C07 na matriz de validação cruzada. Se o seu 
+caso gerar mais de uma hipótese, aplique o critério de conflito definido na Etapa 4. 
+Etapa 12: Análise crítica 
+ Qual a diferença entre sintoma observado, regra e hipótese inferida? 
+ Qual forma de raciocínio está embutida nas regras de triagem, e qual forma de raciocínio o motor de inferência 
+executa ao aplicá-las? 
+ Por que a conclusão do protótipo não deve ser apresentada como diagnóstico definitivo? 
+ Na tabela-verdade construída na Etapa 3, por que as linhas em que o antecedente é falso tornam a implicação 
+verdadeira? Isso significa que a hipótese está descartada nessas linhas? 
+ O que a equipe fez quando mais de uma regra foi aplicável, e por quê? Um sistema real poderia deixar essa 
+decisão em aberto? 
+ Como a mesma regra aparece na fala do técnico, na lógica e no Prolog? O que se perdeu no caminho? 
+ Qual foi a decisão de modelagem mais difícil da Etapa 2, e o que aconteceria se a equipe tivesse decidido de 
+outra forma? 
+ Qual é a função da máquina de estados neste problema, e por que ela não substitui a base de conhecimento? 
+ O que significa uma consulta não ser demonstrável com a base disponível? 
+ Por que C05 e C06 não autorizam concluir automaticamente a hipótese oposta? 
+ Onde houve backtracking nas consultas analisadas, e o que isso tem a ver com busca em um espaço de 
+possibilidades? 
+ Sem a trilha de explicação, o que este sistema deixaria de oferecer ao técnico que recebe o chamado? 
+ Quais limitações este protótipo possui? 
+9. Entregáveis 
+ Dossiê técnico do projeto. 
+ Caracterização do problema nas duas camadas e tarefa cognitiva identificada. 
+ Tabela de regras extraída da fonte, com rastreamento ao trecho de origem. 
+
+=== PAGINA 9 ===
+ Registro das decisões de modelagem (redundância, ambiguidade e lacuna). 
+ Dicionário de proposições, formalização lógica e verificação semântica por tabela-verdade. 
+ Validação lógica de C01 a C06. 
+ Análise do conjunto de conflito do C04 e critério de resolução adotado. 
+ Diagrama e tabela da máquina de estados. 
+ Base de conhecimento e código Prolog, organizado em fatos e regras. 
+ Predições e registros das consultas. 
+ Documentação do motor de inferência: unificações, ordem de busca, backtracking e trace. 
+ Matriz de validação cruzada de C01 a C06 com trilha de explicação. 
+ Evolução da base: alteração de fato (Parte A) e incorporação da regra nova (Parte B). 
+ Caso C07 criado pela equipe e sua validação cruzada completa. 
+ Análise crítica e conclusão. 
+ Apresentação técnica demonstrando o raciocínio e a integração entre as representações. 
+10. Orientação para a apresentação 
+A apresentação deverá demonstrar o raciocínio desenvolvido, e não apenas exibir slides ou código. A equipe 
+deverá ser capaz de explicar uma mesma decisão em cinco níveis: o trecho da fonte que a originou, a formalização 
+lógica, a representação e a consulta em Prolog, o caminho percorrido pelo motor de inferência e a evolução do 
+processo na máquina de estados. O professor poderá propor uma alteração de condição e solicitar a previsão do 
+comportamento antes da execução, e poderá pedir a justificativa de uma conclusão em linguagem natural. 
+11. Base curricular e materiais utilizados 
+A situação utiliza conteúdos efetivamente trabalhados nas unidades curriculares de Lógica para Inteligência 
+Artificial e de Sistemas Baseados em Conhecimento: tipos de problemas nas camadas estrutural e cognitiva; 
+casos clássicos de sistemas baseados em conhecimento; formas de raciocínio; raciocínio dedutivo; lógica 
+proposicional (definição, sintaxe, semântica e validação); regras lógicas; máquina de estados (aplicação, ações e 
+tabela de transição); representação do conhecimento em fatos e regras; inferência; programação declarativa; 
+unificação; backtracking; leitura de trace; e presunção de mundo fechado. Inclui, em particular, as formas de 
+raciocínio artificial e o tratamento de mais de uma regra aplicável ao mesmo conjunto de fatos. Não há exigência 
+de listas, recursão ou outros recursos não abordados em aula. 

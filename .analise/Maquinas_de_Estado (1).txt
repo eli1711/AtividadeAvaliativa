@@ -1,0 +1,634 @@
+=== PAGINA 1 ===
+L Ó G I C A  P A R A  I N T E L I G Ê N C I A  A R T I F I C I A L
+Máquinas de Estado
+Pós-graduação Lato Sensu em Inteligência Artificial
+Faculdade de Tecnologia SENAI Antonio Adolpho Lobbe
+
+=== PAGINA 2 ===
+Objetivos de aprendizagem
+1 Definir formalmente uma máquina de estado e identificar seus componentes (estados, eventos, transições, 
+estado inicial, estado final).
+2 Modelar situações reais como máquinas de estado — do nível mais simples ao mais elaborado.
+3 Formalizar guards de transição usando lógica proposicional.
+4 Compreender por que e como máquinas de estado orquestram agentes de Inteligência Artificial (LLMs).
+5 Testar e validar uma máquina de estado com apoio de um assistente de IA, de forma crítica.
+
+=== PAGINA 3 ===
+F U N D A M E N T O S
+O que é uma Máquina de Estado
+
+
+=== PAGINA 4 ===
+Uma Máquina de Estados (State 
+Machine) é um modelo utilizado 
+para representar o comportamento 
+de um sistema a partir de um 
+conjunto de estados e das 
+transições possíveis entre eles.
+
+
+=== PAGINA 5 ===
+Representação
+Diagrama de transição de estados e notação entrada/saída
+Conceito
+Um diagrama de estados é um grafo 
+orientado que representa como um 
+sistema sequencial muda de estado em 
+função das entradas e, quando 
+aplicável, quais saídas são produzidas.
+Leitura básica
+Sₖ Sⱼ
+x / z
+x = entrada
+z = saída
+Sₖ = estado atual
+Sⱼ = próximo estado
+Em uma máquina de Mealy, a notação 
+entrada/saída aparece tipicamente na transição.
+Diagrama completo × simplificado
+Sₖ Sⱼ
+a / p
+b / q
+Completo: cada direção possui sua própria 
+transição.
+Sₖ Sⱼ
+a / p,  b / q
+Rótulos podem ser agrupados quando levam ao 
+mesmo próximo estado.
+
+=== PAGINA 6 ===
+2 Máquinas de Moore e Mealy
+A diferença principal está em como a saída é determinada e representada
+Máquina de Moore
+Saída = f(estado)
+A saída está associada ao estado atual. Nos arcos 
+ficam as entradas/eventos que provocam as 
+transições.
+A
+[0]
+B
+[1]
+10, 11
+01, 00
+[0] e [1] = saídas associadas aos estados
+Moore: “Estou neste estado, portanto produzo esta 
+saída. ”
+Máquina de Mealy
+Saída = f(estado, entrada)
+A saída depende do estado atual e da entrada. Entrada 
+e saída são normalmente escritas nos arcos como 
+entrada/saída.
+A B
+10 / 1, 11 / 1 
+01 / 0, 11 / 0
+entrada / saída
+Mealy: “Estou neste estado e recebi esta entrada, portanto 
+produzo esta saída. ”
+00 / 0
+01/ 0
+10 / 1
+00/ 1
+
+=== PAGINA 7 ===
+3 Representação da saída
+Mealy: saída nos arcos • Moore: saída nos estados
+Mealy: saída nos arcos 
+Moore: saída nos estados
+
+=== PAGINA 8 ===
+Exemplo de Máquina de Mealy
+Codificação dos estados e leitura das transições
+
+=== PAGINA 9 ===
+Tabela de Transição de Estados
+Como transformar o diagrama de Mealy em uma tabela
+
+=== PAGINA 10 ===
+Tabela de Transição de Estados
+Como transformar o diagrama de Moore em uma tabela
+
+
+=== PAGINA 11 ===
+MÁQUINAS DE ESTADO
+Exemplo passo a passo:
+Semáforo
+Do problema real ao diagrama, tabela de transição e lógica 
+proposicional
+VERMELHO
+ VERDE
+ AMARELO
+tempo tempo
+
+=== PAGINA 12 ===
+Conceitos que precisamos dominar
+Vamos separar claramente estado, evento, condição e transição.
+ESTADO
+Situação relevante em que 
+o sistema se encontra 
+agora.
+Ex.: VERMELHO.
+EVENTO
+Algo que acontece e 
+dispara a avaliação de uma 
+possível mudança.
+Ex.: tempo esgotou.
+CONDIÇÃO / GUARD
+Expressão que precisa ser 
+verdadeira para permitir a 
+mudança.
+Ex.: tempo mínimo 
+atingido.
+TRANSIÇÃO
+Mudança permitida de um 
+estado para outro.
+Ex.: VERMELHO → VERDE.
+Modelo mental: ESTADO ATUAL + EVENTO [e GUARD, quando houver] → TRANSIÇÃO 
+→ NOVO ESTADO
+
+=== PAGINA 13 ===
+PASSO 0
+Definir o problema antes de desenhar
+Sistema
+Um semáforo veicular com 
+três luzes.
+Entradas
+Somente o término do tempo 
+de cada fase.
+Fora do modelo
+Pedestres, sensores, 
+emergência e cruzamento 
+completo.
+Por que simplificar?
+Porque uma boa modelagem começa isolando o comportamento essencial. Depois acrescentamos 
+complexidade de forma controlada.
+
+=== PAGINA 14 ===
+PASSO 1
+Identificar os estados
+Pergunta: quais situações relevantes o sistema pode assumir?
+VERMELHO
+ VERDE
+ AMARELO
+S = { VERMELHO, VERDE, AMARELO }
+“Finito” significa que o conjunto de estados possíveis foi delimitado. Neste modelo não existe, por exemplo, 
+um estado AZUL.
+
+=== PAGINA 15 ===
+PASSO 2
+Escolher o estado inicial
+A máquina precisa saber onde começa.
+INÍCIO
+ VERMELHO
+s₀ = VERMELHO
+Conceito
+s₀ representa o estado inicial. É o ponto de partida definido para a execução 
+da máquina.
+
+=== PAGINA 16 ===
+PASSO 3
+Identificar o evento
+O que faz a máquina considerar uma mudança?
+VERMELHO
+tempo_esgotado
+VERDE
+Evento
+tempo_esgotado
+O evento não é a mudança. Ele é o gatilho que faz a máquina consultar a regra 
+correspondente ao estado atual.
+
+=== PAGINA 17 ===
+PASSO 4
+Definir a primeira transição
+Agora unimos estado atual, evento e próximo estado.
+VERMELHO
+tempo_esgotado
+VERDE
+VERMELHO + tempo_esgotado → VERDE
+Leitura: “Se estou no estado VERMELHO e o tempo termina, então o próximo estado será VERDE. ”
+
+=== PAGINA 18 ===
+PASSO 5
+Completar todas as transições
+Uma FSM precisa descrever o comportamento relevante do sistema.
+VERMELHO
+tempo esgotado
+VERDE
+tempo esgotado
+AMARELO
+tempo_esgotado
+O resultado é um ciclo: VERMELHO → VERDE → AMARELO → VERMELHO → ...
+Estado inicial
+
+=== PAGINA 19 ===
+PASSO 6
+Transformar o diagrama em tabela
+A tabela de transição descreve as mesmas regras de forma sistemática.
+Estado atual Evento Próximo estado
+VERMELHO tempo_esgotado VERDE
+VERDE tempo_esgotado AMARELO
+AMARELO tempo_esgotado VERMELHO
+Vantagem: a tabela facilita conferir se algum estado ou evento ficou sem tratamento.
+
+=== PAGINA 20 ===
+PASSO 7
+Escrever as transições como regras
+Conexão com a Lógica.
+Regra 1
+SE estado = VERMELHO
+E tempo_esgotado
+ENTÃO estado = VERDE
+Regra 2
+SE estado = VERDE
+E tempo_esgotado
+ENTÃO estado = AMARELO
+Regra 3
+SE estado = AMARELO
+E tempo_esgotado
+ENTÃO estado = VERMELHO
+A máquina não “escolhe livremente”: ela segue as transições que foram definidas.
+
+=== PAGINA 21 ===
+PASSO 8
+Entender a função de transição δ
+Uma forma formal de escrever exatamente a mesma ideia.
+δ(estado atual, evento) = próximo estado
+δ₁
+δ(VERMELHO, tempo) = VERDE
+δ₂
+δ(VERDE, tempo) = AMARELO
+δ₃
+δ(AMARELO, tempo) = VERMELHO
+δ não cria uma nova ideia: apenas formaliza matematicamente as regras de transição.
+
+=== PAGINA 22 ===
+PASSO 9
+Executar a máquina manualmente
+Uma FSM é dinâmica: precisamos acompanhar a sequência de estados.
+1 Estado atual
+VERMELHO
+2 Evento
+tempo_esgotado
+3 Consultar δ
+δ(VERMELHO, 
+tempo)
+4 Novo estado
+VERDE
+Depois disso, VERDE passa a ser o estado atual. Quando ocorrer novo evento, a máquina repete o 
+processo.
+
+=== PAGINA 23 ===
+CONCEITO IMPORTANTE
+Por que o estado é uma forma de memória?
+Suponha que recebemos apenas: tempo_esgotado
+Se o estado é VERMELHO
+próximo → VERDE
+Se o estado é VERDE
+próximo → AMARELO
+Se o estado é AMARELO
+próximo → VERMELHO
+O mesmo evento produz resultados diferentes porque a decisão depende também do 
+ESTADO ATUAL.
+
+=== PAGINA 24 ===
+EVOLUÇÃO 1
+Agora adicionamos uma condição (guard)
+O evento pode disparar a avaliação, mas a transição só ocorre se a condição for verdadeira.
+Exemplo didático: encerrar o verde quando o tempo mínimo foi atingido E não há 
+veículo detectado.
+P = estado VERDE      Q = tempo mínimo atingido      R = veículo detectado
+P ∧ Q ∧ ¬R  →  AMARELO
+Guard = condição lógica que precisa ser satisfeita para permitir a transição.
+
+=== PAGINA 25 ===
+Máquina de Estados — Semáforo em Python
+Objetivos
+• compreender estado, evento e transição;
+• relacionar a função de transição δ (delta) com o código Python;
+• observar uma máquina de estados funcionando continuamente com while;
+• utilizar time.sleep() para simular a permanência em cada estado;
+• reconhecer por que este exemplo pode ser interpretado como uma Máquina de 
+Moore.
+Exemplo no Colab
+
+=== PAGINA 26 ===
+EVOLUÇÃO 2
+Adicionar pedestres aumenta o modelo
+Novos requisitos podem exigir novos estados, eventos e guards.
+VERDE
+VEÍCULOS
+pedido
+ AMARELO
+VEÍCULOS
+VERMELHO
+VEÍCULOS
+VERDE
+PEDESTRES
+Novo evento
+pedestre_solicitou_passagem
+Nova guard
+tempo mínimo atingido
+Nova pergunta
+Quando é seguro voltar ao 
+fluxo veicular?
+
+=== PAGINA 27 ===
+O passo a passo completo
+1 Definir o 
+problema
+2 Identificar 
+estados
+3 Escolher estado 
+inicial
+4 Identificar 
+eventos
+5 Definir 
+transições
+6 Criar tabela 7 Adicionar guards 8 Simular e validar
+Uma boa FSM é compreensível, completa para o problema modelado e possui transições que 
+podem ser verificadas.
+20
+
+=== PAGINA 28 ===
+ATIVIDADE
+Desafio : evoluir o semáforo
+1. Pedestre
+Inclua botão e fase de 
+travessia.
+2. Sensor
+Inclua detecção de 
+veículos.
+3. Emergência
+Inclua um modo especial.
+4. Lógica
+Formalize pelo menos duas 
+guards.
+Entregáveis: diagrama de estados + tabela de transição + duas condições em lógica 
+proposicional + uma simulação de execução.
+21
+
+=== PAGINA 29 ===
+Definição formal
+Modelo didático: M = (S, E, δ, s₀)  •  F é opcional quando há estados 
+finais/aceitação
+S Conjunto finito de estados
+Σ Conjunto de eventos/entradas relevantes
+δ Função de transição: δ define o próximo estado a partir do estado atual e da entrada/evento
+s₀ Estado inicial
+F Estados finais/aceitação, quando o modelo exigir (comum em autômatos; não obrigatório em 
+toda FSM de controle)
+22
+
+=== PAGINA 30 ===
+Vocabulário essencial
+Estado
+Uma condição distinta em que o 
+sistema pode estar.
+Evento
+Um “gatilho” (trigger) que pode 
+causar uma transição.
+Transição
+A mudança de um estado para 
+outro, causada por um evento.
+Estado inicial
+Onde o sistema começa, antes de qualquer evento.
+Estado final
+Estado de aceitação/encerramento (quando aplicável).
+Ideia central: em uma FSM sequencial simples, o sistema mantém um estado ativo e muda conforme 
+transições definidas. Em Statecharts/UML podem existir regiões ortogonais com estados ativos em paralelo.
+
+=== PAGINA 31 ===
+Determinístico × não-determinístico
+Determinística
+Cada par (estado, evento) leva a exatamente UM 
+próximo estado. Sem ambiguidade — é o que usaremos 
+aqui.
+Não-determinística
+Um par (estado, evento) pode levar a mais de um 
+próximo estado possível. Útil em teoria da computação; 
+não é nosso foco hoje.
+Na teoria de autômatos finitos, um NFA pode ser convertido em um DFA equivalente quanto à linguagem reconhecida. 
+Não generalize essa equivalência automaticamente para toda máquina de estados comportamental/UML.
+
+=== PAGINA 32 ===
+E L A B O R A N D O
+Guards, Tabela de Transição
+e a Conexão com a Lógica
+Como condições lógicas controlam quando uma transição pode ocorrer.
+33
+
+=== PAGINA 33 ===
+Tabela de transição
+Uma tabela de transição registra, de forma sistemática, estado atual, evento/entrada, guard (se houver), 
+ação (se houver) e próximo estado. Ela complementa o diagrama.
+Estado \ Evento inserir_credito passar
+Travada Destravada —
+Destravada — Travada
+O símbolo — indica transição não definida para aquela combinação. O tratamento (ignorar, rejeitar, 
+sinalizar erro etc.) deve ser especificado pelo sistema; não é universal.
+34
+
+=== PAGINA 34 ===
+Guards: a lógica proposicional volta a aparecer
+Uma transição pode depender de uma condição lógica, não só de um evento
+SE (pagamento_aprovado ∧ estoque_disponível) ENTÃO → Em_Separação
+Evento
+O “gatilho” que dispara a avaliação da transição 
+(ex.: nova informação chega).
+Guard
+A guard é uma expressão booleana que decide SE 
+a transição pode ocorrer. Pode usar ∧, ∨, ¬, 
+comparações e outras condições do domínio.
+
+=== PAGINA 35 ===
+
+
+=== PAGINA 36 ===
+Estados compostos: uma introdução aos Statecharts
+Quando um estado “contém” uma sub-máquina inteira
+David Harel (1987) propôs Statecharts para acrescentar hierarquia, ortogonalidade/concorrência e 
+comunicação a modelos de estados. A UML State Machine adota uma variante baseada nesses 
+conceitos.
+Hierarquia
+Um estado pode conter outros estados 
+dentro dele (sub-máquina).
+Concorrência
+Regiões que executam 
+simultaneamente, de forma 
+independente.
+Comunicação
+Eventos podem ser transmitidos entre 
+regiões/máquinas.
+
+=== PAGINA 37 ===
+Explosão de estados
+Por que adicionar variáveis multiplica rapidamente a complexidade
+2ⁿ
+quando n variáveis booleanas independentes são codificadas explicitamente como combinações de estados
+2 variáveis booleanas
+até 4 combinações de estado
+5 variáveis booleanas
+até 32 combinações de estado
+Esse crescimento motiva hierarquia, estados compostos, regiões ortogonais, decomposição e outras 
+técnicas de modelagem. IA não é uma solução geral para “explosão de estados” .
+
+=== PAGINA 38 ===
+Exemplo · Nível Elaborado
+Pedido em um e-commerce (5 estados)
+Estados: Pendente, Em_Separação, Enviado, Entregue, Cancelado
+PA
+pagamento aprovado
+ED
+estoque disponível
+C
+cliente cancelou
+Estado atual Guard Próximo estado
+Pendente PA ∧ ED Em_Separação
+Pendente ¬PA ∨ C Cancelado
+Em_Separação despachar Enviado
+Em_Separação C Cancelado
+Enviado confirmar_recebimento Entregue
+
+=== PAGINA 39 ===
+Diagrama do pedido e-commerce
+Pendente Em_Separação
+Enviado Entregue
+Cancelado
+PA ∧ ED
+despachar
+confirmar
+¬PA ∨ C C
+
+=== PAGINA 40 ===
+
+
+=== PAGINA 41 ===
+FSMs E COMPONENTES DE IA
+Máquinas de Estado na
+Orquestração de Agentes de IA
+Como usar estados, transições e guards para estruturar fluxos de trabalho que 
+incluem LLMs.
+
+
+=== PAGINA 42 ===
+O problema que motiva tudo
+LLMs geram saídas probabilísticas e podem não seguir, de forma garantida, todas as restrições de um 
+fluxo longo. Em aplicações controladas, o fluxo e as validações podem ser explicitados fora do modelo.
+GERAR ≠ VERIFICAR
+(relembrando o slide do Encontro 02 sobre Lógica Proposicional na era da IA)
+O que pode dar errado se deixarmos um LLM sozinho conduzir uma conversa de suporte ao cliente por 20 
+mensagens, sem nenhuma estrutura?
+
+=== PAGINA 43 ===
+Um padrão possível: FSM como controlador explícito do fluxo
+Estados e transições explícitos ao redor de componentes probabilísticos
+O LLM pode gerar ou analisar CONTEÚDO
+Em determinados estados, o LLM pode executar 
+uma subtarefa: classificar, extrair, resumir, 
+planejar ou redigir.
+A FSM pode controlar o FLUXO
+As transições e guards definem quando o sistema 
+pode avançar, retornar, repetir ou escalar. O 
+desenho exato depende da arquitetura.
+Cada estado representa um papel, uma subtarefa ou uma fase da conversa/tarefa.
+
+=== PAGINA 44 ===
+Duas direções da literatura
+Como pesquisa recente conecta FSM e redes neurais
+1. FSM controlando o agente
+Uma linha de trabalho usa FSMs ou grafos de 
+estados para impor estrutura ao fluxo enquanto 
+LLMs executam subtarefas dentro dos estados ou 
+propõem decisões sujeitas a validação.
+2. FSM extraída de uma rede neural
+Usada para INTERPRETAR o que a rede aprendeu 
+internamente (extração de autômatos de RNNs) 
+— mais avançado, nível conceitual.
+Aqui focaremos na direção 1 por ser didaticamente útil para compreender orquestração e controle 
+explícito de fluxo.
+
+=== PAGINA 45 ===
+Onde a Lógica Proposicional entra de novo
+SE valor_reembolso > limite ENTÃO → Escalar_para_Humano
+Em sistemas reais, guards podem representar regras de negócio, validações, limites, 
+permissões e resultados de ferramentas/modelos.
+A lógica proposicional continua útil para formalizar parte das condições que controlam 
+transições em fluxos que incluem IA.
+
+=== PAGINA 46 ===
+Padrão híbrido: divisão de responsabilidades
+Responsabilidade Quem decide Exemplo
+Conteúdo da resposta LLM Texto formulado dentro do estado Formular_Resposta
+Controle de fluxo FSM + guards Se pode avançar, voltar ou escalar para humano
+Critério de validação Lógica Proposicional SE valor > limite ENTÃO Escalar_Humano
+Nem tudo precisa ser decidido pela FSM, e saídas do LLM não devem ser tratadas como garantia de 
+cumprimento de regras. Confiabilidade depende também de validação, testes, tratamento de erros, 
+observabilidade e controles externos.
+
+=== PAGINA 47 ===
+
+
+=== PAGINA 48 ===
+LABORATÓRIO · DEMONSTRAÇÃO PRÁTICA
+Vamos construir um exemplo bem simples e didático de como uma Máquina de Estados 
+pode participar do controle de uma aplicação que utiliza uma LLM.
+Neste primeiro momento não vamos chamar uma API de IA. Você poderá copiar uma 
+resposta produzida por ChatGPT, Gemini, Claude ou outra LLM e colocá-la no programa.
+Validação de Resposta de uma LLM com Máquina de Estados
+Exemplo no Colab
+
+=== PAGINA 49 ===
+Projeto em grupo: Desafio: Da Lógica ao Agente de IA
+1 Desenhe a FSM de um agente de IA aplicável à  sua área de atuação (use as variantes já vistas como ponto de 
+partida).
+2 Formalize pelo menos UMA guard em lógica proposicional.
+3 Escreva o prompt estruturado (como na demonstração) e teste em um assistente de IA real.
+4 Compare o resultado da IA com o esperado e aponte UMA situação em que a IA poderia “fugir” da máquina de 
+estado sem validação externa.
+Nesta atividade em grupo, vocês deverão criar um agente de IA aplicado à área de atuação do grupo, utilizando Máquinas de 
+Estados e Lógica Proposicional. O grupo deverá modelar estados, eventos, transições e pelo menos uma guard, elaborar e testar 
+um prompt estruturado em uma IA real e analisar como mecanismos de validação podem impedir comportamentos fora do fluxo 
+esperado.
+
+=== PAGINA 50 ===
+A linha de raciocínio completa
+Lógica Proposicional
+Como formalizar UMA condição
+Máquina de Estado
+Como formalizar uma SEQUÊNCIA de decisões ao longo do tempo
+Orquestração de Agentes de IA
+Como combinar condições lógicas e controle de fluxo explícito em aplicações que incluem 
+componentes probabilísticos
+62
+
+=== PAGINA 51 ===
+Referências · Fundamentos
+Stanford University — CS103 / Autômatos e linguagens formais
+web.stanford.edu/class/cs103/
+NIST — Finite State Machine em controle e software
+nist.gov/publications/expanding-role-finite-state-machine-technology-open-architecture-control
+OMG — UML: State Machine Diagram / especificação
+omg.org/uml/
+63
+
+=== PAGINA 52 ===
+Referências · Guards e Statecharts
+David Harel (1987) — Statecharts: A Visual Formalism for Complex Systems
+sciencedirect.com/science/article/pii/0167642387900359
+OMG — Precise Semantics of UML State Machines
+omg.org/spec/PSSM
+Hopcroft, Motwani & Ullman — Introduction to Automata Theory, Languages, and Computation
+dl.acm.org/doi/book/10.5555/1196416
+Robert Nystrom — Game Programming Patterns, capítulo State
+gameprogrammingpatterns.com/state.html
+64
+
+=== PAGINA 53 ===
+Referências · Orquestração de Agentes de IA
+IBM — LLM Agent Orchestration: guia de orquestração
+ibm.com/br-pt/think/tutorials/llm-agent-orchestration-with-langchain-and-granite
+MetaAgent — Multi-Agent Systems Based on Finite State Machines (2025)
+arxiv.org/html/2507.22606
+FlowFSM — FSM Extraction using Prompt Chaining (2025)
+arxiv.org/abs/2507.11222
+Weiss et al. — Extração de autômatos de redes recorrentes
+link.springer.com/article/10.1007/s10994-022-06163-2

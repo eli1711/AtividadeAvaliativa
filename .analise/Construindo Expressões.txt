@@ -1,0 +1,563 @@
+=== PAGINA 1 ===
+Prof. Paulo José Rodolpho
+
+=== PAGINA 2 ===
+ELABORAÇÃO DAS Expressões
+Método dos 6 passos
+1. Leia a situação em português sem falar de lógica.
+2. Separe as afirmações simples.
+3. Dê uma letra para cada afirmação.
+4. Localize palavras como NÃO, E, OU, SE...ENTÃO, SOMENTE SE.
+5. Monte a fórmula por partes.
+6. Leia a fórmula de volta em português e confira se o significado foi preservado.
+
+=== PAGINA 3 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Uma afirmação
+S = “O sensor está ativo. ”
+1. Isto é uma frase que pode ser verdadeira ou falsa?
+2. Vamos chamar essa afirmação inteira de S.
+3. Uma proposição simples já pode ser uma fórmula.
+Fórmula final   =  S
+SITUAÇÃO: O sensor está ativo.
+
+=== PAGINA 4 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Uma afirmação
+S = “O sensor está ativo. ”
+Em vez de criar outra letra, vamos negar S.
+Fórmula final   =  ¬S
+SITUAÇÃO: O sensor não está ativo.
+
+=== PAGINA 5 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Conjunção
+SITUAÇÃO: O usuário possui login e senha.
+L = “O usuário possui login. ”
+S = “O usuário possui senha. ”
+Fórmula final = L ∧ S
+
+=== PAGINA 6 ===
+NÍVEL 1 • AQUECIMENTO
+HORA DO PADLET — DESAFIOS 1 E 2
+Primeiro formalizamos sozinhos. Depois comparamos as respostas.
+DESAFIO 1
+O relatório foi aprovado e o orçamento foi 
+autorizado.
+Proposições → letras → expressão → leitura.
+DESAFIO 2
+O equipamento está disponível e a manutenção 
+não está agendada.
+Atenção à conjunção e à negação.
+Em dupla • 6 minutos • Sem IA • Publique proposições, expressão, leitura e justificativa.
+PADLET • DO PORTUGUÊS PARA A LÓGICA
+
+=== PAGINA 7 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Disjunção
+SITUAÇÃO: O usuário pode autenticar-se com senha ou biometria.
+S = “O usuário utiliza senha. ”
+B = “O usuário utiliza biometria. ”
+Fórmula final = S ∨ B
+
+=== PAGINA 8 ===
+ELABORAÇÃO DAS EXPRESSÕES
+E com negação
+SITUAÇÃO: A grade está fechada e não há pessoa na área de risco.
+G = “A grade está fechada. ”
+P = “Há pessoa na área de risco. ”
+Fórmula final = G ∧ ¬P
+
+=== PAGINA 9 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Primeira regra SE...ENTÃO
+SITUAÇÃO: Se o pagamento for aprovado, então o pedido será liberado.
+P = “O pagamento foi aprovado. ”
+L = “O pedido é liberado. ”
+Fórmula final = P → L
+O que vem primeiro como condição? A variável P.
+Qual é o resultado? A variável  L.
+O nome dessa regra é : implicação/condicional.
+
+=== PAGINA 10 ===
+NÍVEL 2 • CONECTANDO 
+IDEIAS
+PADLET — DESAFIOS 3 E 4
+Agora entram OU e a direção da implicação.
+DESAFIO 3
+O participante poderá apresentar o trabalho 
+presencialmente ou por videoconferência.
+Considere o OU inclusivo da lógica clássica.
+DESAFIO 4
+Se a temperatura do servidor ultrapassar o limite 
+estabelecido, então o sistema emitirá um alerta.
+Além da fórmula, explique a direção da seta.
+Em dupla • 7 minutos • Sem IA • Depois vamos comparar duas respostas da turma.
+PADLET • DO PORTUGUÊS PARA A LÓGICA
+
+=== PAGINA 11 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Condição composta
+SITUAÇÃO: Se o usuário estiver autenticado e possuir permissão, então o acesso 
+será liberado.
+A = “O usuário está autenticado. ”
+P = “O usuário possui permissão. ”
+L = “O acesso é liberado. ”
+Fórmula final = (A ∧ P) → L
+
+=== PAGINA 12 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Condição composta com negação
+SITUAÇÃO: Se a grade estiver fechada e não houver pessoa na área de risco, então 
+a máquina será habilitada.
+G = “A grade está fechada. ”
+P = “Há pessoa na área de risco. ”
+M = “A máquina é habilitada. ”
+Fórmula final = (G ∧ ¬P) → M
+
+=== PAGINA 13 ===
+NÍVEL 3 • COMBINANDO 
+CONDIÇÕES
+PADLET — DESAFIOS 5 E 6
+Combine conectivos sem perder o significado da frase original.
+DESAFIO 5
+Se o arquivo estiver assinado digitalmente e não 
+estiver corrompido, então ele poderá ser enviado 
+para processamento.
+Condição composta + negação + consequência.
+DESAFIO 6
+Se o estoque estiver abaixo do mínimo e não 
+houver pedido de reposição em andamento, 
+então o sistema deverá gerar uma solicitação de 
+compra.
+Monte a expressão por partes.
+Em dupla • 8 minutos • Sem IA primeiro • Leia a fórmula de volta em português.
+PADLET • DO PORTUGUÊS PARA A LÓGICA
+
+=== PAGINA 14 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Negação no resultado
+SITUAÇÃO: Se o usuário estiver bloqueado, então o acesso não será autorizado.
+B = “O usuário está bloqueado. ”
+E = “A entrada é autorizada. ”
+Fórmula final = B → ¬E
+
+=== PAGINA 15 ===
+NÍVEL 4 • CUIDADO COM A 
+DIREÇÃO
+PADLET — DESAFIO 7
+Antes da explicação: tente descobrir a direção da regra.
+DESAFIO 7 • TENTE ANTES DA EXPLICAÇÃO
+Para que um artigo seja publicado no periódico, é 
+necessário que ele tenha sido aprovado na 
+revisão por pares.
+Formalize e justifique a direção da implicação.
+POR ENQUANTO, NÃO FAÇA O DESAFIO 8
+O Desafio 8 será chamado em outro slide, depois 
+de estudarmos condição necessária, suficiente e 
+“somente se” .
+Primeiro tente o Desafio 7 com o que você já sabe.
+Em dupla • 5 minutos • Sem IA • Formalize e justifique a direção da seta. Depois vamos usar a dúvida para aprender o 
+conceito.
+PADLET • DO PORTUGUÊS PARA A LÓGICA
+
+=== PAGINA 16 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Condição necessária
+SITUAÇÃO: Para entrar no laboratório, é necessário possuir credencial válida.
+E = “A entrada é autorizada. ”
+C = “Possui credencial válida. ”
+Fórmula final = E → C
+A frase diz que ter credencial garante entrada?  Não.
+Se a entrada foi autorizada, a credencial precisa 
+existir?” Sim.
+Quando C é necessário para E, E não pode ocorrer sem C. Na forma E → C, C aparece depois da seta.
+
+=== PAGINA 17 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Duas condições necessárias
+SITUAÇÃO: Para entrar no laboratório, é necessário possuir credencial válida e 
+treinamento concluído.
+E = “A entrada é autorizada. ”
+C = “Possui credencial válida. ”
+T = “Treinamento concluído. ”
+Fórmula final = E → (C ∧ T)
+Essas condições garantem entrada ou são 
+requisitos para quem entra?
+São requisitos
+Não conclua E apenas porque C e T são verdadeiros; a fórmula expressa necessidade, não suficiência.
+
+=== PAGINA 18 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Condição suficiente
+SITUAÇÃO: Uma autorização especial válida é suficiente para liberar o acesso.
+S = “Existe autorização especial válida. ”
+E = “O acesso é liberado. ”
+Fórmula final = S → E
+Se S ocorrer, isso já basta, pela regra, para 
+concluir E.
+Suficiência não é necessidade: E também pode ocorrer sem S, por outro caminho previsto nas regras.
+
+=== PAGINA 19 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Somente se
+SITUAÇÃO: O desconto será concedido somente se o cliente for Premium.
+D = “O desconto é concedido. ”
+P = “O cliente é Premium. ”
+Fórmula final = D → P
+A somente se B” é formalizado como A → B
+
+=== PAGINA 20 ===
+NÍVEL 4 • AGORA APLIQUE
+PADLET — DESAFIO 8
+Agora use o que acabamos de aprender sobre condição necessária e “somente se” .
+DESAFIO 8 — TESTE SUA INTERPRETAÇÃO
+Um candidato receberá a certificação somente se concluir a avaliação prática.
+Formalize • explique a direção da seta • diga se a avaliação prática é condição necessária ou suficiente.
+Em dupla • 5 minutos • Sem IA primeiro • Compare com o Desafio 7 e explique o que mudou na sua interpretação.
+PADLET • DO PORTUGUÊS PARA A LÓGICA
+
+=== PAGINA 21 ===
+ELABORAÇÃO DAS EXPRESSÕES
+Se e somente se
+SITUAÇÃO: A porta é liberada se, e somente se, o cartão for válido.
+L = “A porta é liberada. ”
+C = “O cartão é válido. ”
+Fórmula final = L 
+  C
+L 
+  C equivale a (L → C) ∧ (C → L): a regra vale 
+nos dois sentidos.
+O bicondicional é mais forte do que uma implicação isolada.
+
+=== PAGINA 22 ===
+NÍVEL 5 • DUAS 
+DIREÇÕES
+PADLET — DESAFIO 9
+Agora vamos representar uma condição que deve valer nos dois sentidos.
+DESAFIO 9
+O backup será considerado concluído se, e 
+somente se, todos os arquivos forem copiados 
+e a verificação de integridade não detectar 
+erros.
+Identifique as proposições • formalize • mostre 
+as duas implicações do bicondicional.
+FOCO DESTA ETAPA
+Até aqui, o objetivo é transformar linguagem 
+natural em uma expressão lógica. A validação 
+virá depois.
+FORMALIZAÇÃO primeiro. VALIDAÇÃO 
+somente no próximo nível.
+Resolva o Desafio 9 após estudarmos 
+ • Ainda não é necessário validar uma decisão.
+PADLET • DO PORTUGUÊS PARA A LÓGICA
+
+=== PAGINA 23 ===
+DO EXERCÍCIO ISOLADO PARA UM SISTEMA COM VÁRIAS REGRAS
+Agora muda a escala: não vamos fazer uma fórmula enorme. Vamos guardar várias regras pequenas 
+e dar um identificador para cada uma.
+Sistema de acesso
+ Letra Significado
+E entrada autorizada
+C credencial válida
+T treinamento concluído
+B bloqueio ativo
+Vi é visitante
+A visitante acompanhado
+R acesso à área restrita
+S autorização especial
+
+=== PAGINA 24 ===
+DO EXERCÍCIO ISOLADO PARA UM SISTEMA COM VÁRIAS REGRAS
+Construa uma regra por vez
+ID Regra em português Formalização
+R01 Entrada exige credencial válida. E → C
+R02 Entrada exige treinamento concluído. E → T
+R03 Usuário bloqueado não pode entrar. B → ¬E
+R04 Se um visitante entra, precisa estar acompanhado. (Vi ∧ E) → A
+R05 Acesso à área restrita exige autorização especial. R → S
+R06 Quem acessa a área restrita necessariamente entrou. R → E
+Em vez de escrever um parágrafo enorme em uma única fórmula, transformamos cada regra 
+importante em uma pequena peça. Depois o sistema trabalha com o conjunto dessas peças.
+
+=== PAGINA 25 ===
+DO EXERCÍCIO ISOLADO PARA UM SISTEMA COM VÁRIAS REGRAS
+O que é uma Base de Conhecimento (KB)?
+KB é abreviação de Knowledge Base, ou Base de Conhecimento. Para esta aula, pense nela 
+simplesmente como uma coleção organizada de fatos e regras que o sistema pode consultar ou 
+usar para raciocinar.
+KB = {R01, R02, R03, R04, R05, R06}
+Se quisermos dizer matematicamente que todas as regras devem ser respeitadas 
+simultaneamente, podemos pensar na conjunção:
+KB = R01 ∧ R02 ∧ R03 ∧ R04 ∧ R05 ∧ R06
+Na engenharia do sistema, mantenha as regras separadas. A conjunção global é uma forma matemática 
+de pensar no conjunto; não é uma recomendação para manter uma expressão monolítica ilegível.
+
+=== PAGINA 26 ===
+COMO UMA APLICAÇÃO GRANDE É ORGANIZADA
+Quando há dezenas ou centenas de regras, separamos por assunto ou responsabilidade.
+SISTEMA DE DECISÃO
+Credenciamento
+       R001, R002, R003...
+Segurança
+       R101, R102, R103...
+Visitantes
+       R201, R202...
+Área restrita
+       R301, R302...
+Exceções / políticas especiais
+       R401, R402...
+
+=== PAGINA 27 ===
+POR QUE DIVIDIR?
+• fica mais fácil entender qual regra representa qual política;
+• uma regra pode ser testada isoladamente;
+• alterações ficam localizadas;
+• é possível registrar origem, versão e responsável;
+• quando uma decisão falha, podemos apontar qual regra foi violada;
+• grupos diferentes podem manter módulos diferentes.
+
+=== PAGINA 28 ===
+VALIDAR UMA DECISÃO EM UMA BASE MAIOR
+CASO
+A IA diz: “Carlos está autorizado a acessar a área restrita. ”
+DECISÃO + FATOS + REGRAS → VERIFICAÇÃO
+Como verificar se a decisão respeita todas as regras da organização?
+
+=== PAGINA 29 ===
+VALIDAR UMA DECISÃO EM UMA BASE MAIOR
+DECISÃO PROPOSTA PELA IA implica R = V . 
+Considere os fatos: E=V , C=V , T=V e S=F .
+Letra Significado
+E entrada autorizada
+C credencial válida
+T treinamento concluído
+B bloqueio ativo
+Vi é visitante
+A visitante acompanhado
+R acesso à área restrita
+S autorização especial
+Transformando o caso em proposições
+S não significa “especial”: S representa a proposição inteira “Carlos possui autorização especial” .
+
+=== PAGINA 30 ===
+VALIDAR UMA DECISÃO EM UMA BASE MAIOR
+Antes de testar Carlos: relembre a implicação
+Quando P → Q é falsa?
+A única violação ocorre em:  V → F
+A condição prevista pela regra acontece, mas aquilo que a regra exige não acontece.
+P Q P → Q
+V V V
+V F F
+F V V
+F F V
+
+=== PAGINA 31 ===
+VALIDAR UMA DECISÃO EM UMA BASE MAIOR
+Tabela-verdade específica de R05
+R05: se há acesso à área restrita, deve existir autorização especial.
+R05:  R → S
+R = V  e  S = F  ⇒  R05 = F
+R S R → S Interpretação
+V V V Acesso restrito + autorização especial
+V F F Acesso restrito sem autorização especial
+F V V A regra não é violada
+F F V A regra não é violada
+
+=== PAGINA 32 ===
+VALIDAR UMA DECISÃO EM UMA BASE MAIOR
+Agora fornecemos os fatos sobre Carlos
+A decisão proposta e os dados do caso serão testados contra a KB.
+R=V ,  E=V ,  C=V ,  T=V ,  B=F ,  S=F ,  Vi=F
+Proposição Valor Significado no caso
+R V Acesso à área restrita proposto pela IA
+E V Entrada autorizada
+C V Credencial válida
+T V Treinamento concluído
+B F Sem bloqueio ativo
+S F NÃO possui autorização especial
+
+=== PAGINA 33 ===
+VALIDAR UMA DECISÃO EM UMA BASE MAIOR
+Base de Conhecimento: uma regra por vez
+1. Comece pela decisão proposta: R = V .
+2. Procure regras diretamente ligadas a R. R05 diz R → S; R06 diz R → E.
+3. Teste R05. Como R=V e S=F , temos V → F , portanto a regra é violada.
+4. Não é necessário esconder a causa em uma expressão enorme. O sistema pode registrar: “R05 violada: 
+área restrita exige autorização especial. ”
+5. Se R05 estivesse satisfeita, outras regras ligadas a E poderiam ser verificadas, como E → C e E → T.
+ID Regra em português Formalização
+R01 Entrada exige credencial válida. E → C
+R02 Entrada exige treinamento concluído. E → T
+R03 Usuário bloqueado não pode entrar. B → ¬E
+R04 Se um visitante entra, precisa estar acompanhado. (Vi ∧ E) → A
+R05 Acesso à área restrita exige autorização especial. R → S
+R06 Quem acessa a área restrita necessariamente entrou. R → E
+
+=== PAGINA 34 ===
+TESTE R01 — CREDENCIAL OBRIGATÓRIA
+Regra → fatos do caso → substituição → tabela-verdade → conclusão
+PASSO 1 — REGRA
+R01: E → C
+Leitura: se a entrada está autorizada (E), então a credencial é válida (C).
+PASSO 2 — FATOS
+E = V
+C = V
+Os fatos informam o valor de verdade de cada proposição neste caso.
+E → C   ⟹   V → V
+Substituímos cada letra pelo valor V ou F fornecido pelos fatos.
+V → V = V
+R01 foi satisfeita.
+
+=== PAGINA 35 ===
+TESTE R02 — TREINAMENTO OBRIGATÓRIO
+Regra → fatos do caso → substituição → tabela-verdade → conclusão
+PASSO 1 — REGRA
+R02: E → T
+Leitura: se a entrada está autorizada (E), então o treinamento foi 
+concluído (T).
+PASSO 2 — FATOS
+E = V
+T = V
+Os fatos informam o valor de verdade de cada proposição neste caso.
+E → T   ⟹   V → V
+Substituímos cada letra pelo valor V ou F fornecido pelos fatos.
+V → V = V
+R02 foi satisfeita.
+
+=== PAGINA 36 ===
+TESTE R03 — BLOQUEIO
+Aqui existe um passo adicional: calcular primeiro a negação ¬E.
+PASSO 1 — REGRA
+R03: B → ¬E
+Leitura: se Carlos possui bloqueio ativo (B), então sua entrada não está 
+autorizada (¬E).
+PASSO 2 — FATOS
+B = F
+E = V
+Como E = V , sua negação é ¬E = F .
+B → ¬E   ⟹   F → F
+B foi substituído por F .  ¬E também vale F , pois E = V .
+F → F = V
+R03 foi satisfeita.
+
+=== PAGINA 37 ===
+TESTE R04 — VISITANTE ACOMPANHADO
+Quando a condição composta é falsa, a implicação já é verdadeira.
+PASSO 1 — REGRA
+R04: (Vi ∧ E) → A
+Leitura: se Carlos fosse visitante (Vi) e entrasse (E), então deveria estar 
+acompanhado (A).
+PASSO 2 — FATOS
+Vi = F
+E = V
+Carlos não é visitante, então Vi = F e a condição (Vi ∧ E) vale F .
+(Vi ∧ E) → A   ⟹   F → F
+A condição (Vi ∧ E) vale F , logo a regra não exige nada neste caso.
+F → F = V
+R04 foi satisfeita.
+
+=== PAGINA 38 ===
+TESTE R06 — ÁREA RESTRITA E ENTRADA
+Regra → fatos do caso → substituição → tabela-verdade → conclusão
+PASSO 1 — REGRA
+R06: R → E
+Leitura: se Carlos está autorizado a acessar a área restrita (R), então 
+sua entrada está autorizada (E).
+PASSO 2 — FATOS
+R = V
+E = V
+Os fatos informam o valor de verdade de cada proposição neste caso.
+R → E   ⟹   V → V
+Substituímos cada letra pelo valor V ou F fornecido pelos fatos.
+V → V = V
+R06 foi satisfeita.
+
+=== PAGINA 39 ===
+TESTE R05 — AUTORIZAÇÃO ESPECIAL
+Regra → fatos do caso → substituição → tabela-verdade → conclusão
+PASSO 1 — REGRA
+R05: R → S
+Leitura: se Carlos está autorizado a acessar a área restrita (R), então 
+possui autorização especial (S).
+PASSO 2 — FATOS
+R = V
+S = F
+Os fatos informam o valor de verdade de cada proposição neste caso.
+R → S   ⟹   V → F
+Substituímos cada letra pelo valor V ou F fornecido pelos fatos.
+V → F = F
+R05 foi violada.
+
+=== PAGINA 40 ===
+NÍVEL 6 • AUDITORIA DA IA
+PADLET — DESAFIO 10
+Agora muda a pergunta: a decisão proposta pela IA respeita as regras?
+DESAFIO 10 — A DECISÃO DA IA PODE SER ACEITA?
+Agente de IA para reembolso: formalize R01–R04, identifique os fatos e a decisão proposta e 
+verifique quais regras são satisfeitas ou violadas.
+REGRA → FATOS → SUBSTITUIÇÃO → VALIDAÇÃO → CONCLUSÃO
+LIBERE SOMENTE após a demonstração de validação • Classifique a decisão como COMPATÍVEL ou INCOMPATÍVEL.
+PADLET • DO PORTUGUÊS PARA A LÓGICA
+
+=== PAGINA 41 ===
+AUDITORIA COMPLETA DA DECISÃO
+Uma única regra violada é suficiente para tornar o conjunto incompatível.
+Regra Expressão Substituição Valor Situação
+R01 E → C V → V V Compatível
+R02 E → T V → V V Compatível
+R03 B → ¬E F → F V Compatível
+R04 (Vi ∧ E) → A F → F V Compatível
+R06 R → E V → V V Compatível
+R05 R → S V → F F INCOMPATÍVEL
+5 regras satisfeitas + 1 regra violada  ⇒  decisão incompatível
+
+=== PAGINA 42 ===
+A BASE DE CONHECIMENTO COMPLETA
+A expressão global aparece só depois de entendermos as partes.
+KB = (E→C) ∧ (E→T) ∧ (B→¬E) ∧ ((Vi∧E)→A) ∧ (R→S) ∧ (R→E)
+KB = (V→V) ∧ (V→V) ∧ (F→F) ∧ (F→F) ∧ (V→F) ∧ (V→V)
+KB = V ∧ V ∧ V ∧ V ∧ F ∧ V
+KB = F
+A conjunção global é falsa porque pelo menos uma restrição é falsa.
+
+=== PAGINA 43 ===
+O QUE PODEMOS — E O QUE NÃO PODEMOS — CONCLUIR
+Precisão é parte da auditoria.
+PODEMOS CONCLUIR
+A decisão proposta é incompatível com a 
+Base de Conhecimento formalizada para 
+este caso, pois viola R05: R → S.
+NÃO DEVEMOS DIZER
+“A IA está errada em tudo. ”
+“Provamos que os fatos são verdadeiros. ”
+“Provamos que a política é completa e 
+correta no mundo real. ”
+RESPOSTA DA IA ≠ RESPOSTA VALIDADA
+
+=== PAGINA 44 ===
+TESTES: ALTERE UM FATO POR VEZ
+Prediga antes de calcular.
+Teste R E C T B S Violação Resultado
+1 V V V V F F R05 Incompatível
+2 V V V V F V — Compatível
+3 V V V F F V R02 Incompatível
+4 V V V V V V R03 Incompatível
+5 V V F V F V R01 Incompatível
+Dinâmica: esconda as duas últimas colunas → alunos predizem → turma calcula → revele o resultado.
+
+=== PAGINA 45 ===
+COLAB E O Z3
+Agora o computador fará a verificação que acabamos de fazer manualmente.
+RESPOSTA DA 
+IA
+ →
+ REGRAS
+ →
+ BASE
+ →
+ Z3
+ →
+ SAT / 
+UNSAT
+Atividade_Logica_Proposicional_Z3_Colab.ipynb

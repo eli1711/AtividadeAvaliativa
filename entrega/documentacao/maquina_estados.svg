@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1080" viewBox="0 0 1100 1080">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="#31465a"/></marker></defs>
+<rect width="1100" height="1080" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#172e43;font-size:20px}.event{font-size:16px}.box{fill:#edf3f8;stroke:#31465a;stroke-width:2}.edge{fill:none;stroke:#31465a;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="45" y="40" font-size="28" font-weight="bold">Máquina de estados do chamado de manutenção</text>
+<rect class="box" x="400" y="85" width="300" height="70" rx="5"/>
+<text text-anchor="middle" x="550.0" y="114">Aguardando ocorrência</text>
+<rect class="box" x="400" y="235" width="300" height="70" rx="5"/>
+<text text-anchor="middle" x="550.0" y="264">Em triagem</text>
+<rect class="box" x="55" y="435" width="290" height="90" rx="5"/>
+<text text-anchor="middle" x="200.0" y="464">Triagem inconclusiva</text>
+<rect class="box" x="405" y="435" width="290" height="90" rx="5"/>
+<text text-anchor="middle" x="550.0" y="464">Hipótese identificada</text>
+<rect class="box" x="755" y="435" width="290" height="90" rx="5"/>
+<text text-anchor="middle" x="900.0" y="464">Hipóteses concorrentes</text>
+<rect class="box" x="375" y="735" width="350" height="80" rx="5"/>
+<text text-anchor="middle" x="550.0" y="764">Encaminhado para inspeção</text>
+<rect class="box" x="400" y="925" width="300" height="70" rx="5"/>
+<text text-anchor="middle" x="550.0" y="954">Encerrado</text>
+<path class="edge" d="M550 155 V235"/>
+<text class="event" x="565" y="195">ocorrência registrada</text>
+<path class="edge" d="M450 305 V360 H200 V435"/>
+<text class="event" x="75" y="345">nenhuma regra satisfeita</text>
+<path class="edge" d="M550 305 V435"/>
+<text class="event" x="565" y="415">uma regra satisfeita</text>
+<path class="edge" d="M650 305 V360 H900 V435"/>
+<text class="event" x="775" y="345">várias regras satisfeitas</text>
+<path class="edge" d="M200 525 V665 H405 V735"/>
+<text class="event" x="215" y="580">encaminhamento sem hipótese</text>
+<path class="edge" d="M550 525 V735"/>
+<text class="event" x="565" y="610">encaminhamento</text>
+<text class="event" x="565" y="635">normal ou prioritário</text>
+<path class="edge" d="M900 525 V665 H695 V735"/>
+<text class="event" x="750" y="580">critério aplicado</text>
+<text class="event" x="750" y="605">normal ou prioritário</text>
+<path class="edge" d="M55 470 H25 V270 H400"/>
+<text class="event" x="45" y="315">coleta complementar</text>
+<path class="edge" d="M550 815 V925"/>
+<text class="event" x="565" y="875">inspeção finalizada</text>
+<text x="45" y="1040" class="event">Estado inicial: Aguardando ocorrência. Estado final: Encerrado.</text>
+</svg>

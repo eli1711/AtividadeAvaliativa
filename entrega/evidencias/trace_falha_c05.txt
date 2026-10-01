@@ -1,0 +1,22 @@
+ENTRADA
+leash(-all).
+trace.
+hipotese(c05,sobrecarga,r01).
+notrace.
+halt.
+
+SAÍDA REAL
+true.
+
+true.
+
+   Call: (12) hipotese(c05, sobrecarga, r01)
+   Call: (13) temperatura_elevada(c05)
+   Exit: (13) temperatura_elevada(c05)
+   Call: (13) corrente_elevada(c05)
+   Fail: (13) corrente_elevada(c05)
+   Fail: (12) hipotese(c05, sobrecarga, r01)
+false.
+
+true.
+

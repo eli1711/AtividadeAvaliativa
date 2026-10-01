@@ -1,0 +1,388 @@
+=== PAGINA 1 ===
+P a r t e 1
+O Pensamento Declarativo
+Por que você já sabe Prolog (mesmo sem saber)
+pai(joao, carlos). % um fato
+?- pai(Quem, carlos). % uma pergunta
+Quem = joao. % a resposta
+Prof. Me. André Roberto da Silva
+
+=== PAGINA 2 ===
+Imperativo versus Declarativo
+Imperativo
+Python, Java, C, JavaScript.
+Você dá ordens passo a passo: 'pegue 
+esta caixinha de memória, coloque 5, 
+some 3, se der mais que 7 faça um laço'.
+O foco é o COMO executar.
+Declarativo
+Prolog.
+Você descreve o mundo com fatos e 
+relações, define regras e faz perguntas. 
+O mecanismo de resolução deduz as 
+respostas.
+O foco é O QUÊ é verdade.
+2
+
+=== PAGINA 3 ===
+Imperativo versus Declarativo
+Na programação imperativa escrevemos algoritmos. Em Prolog modelamos conhecimento e deixamos o 
+computador buscar.
+Fatos
+verdades sobre o mundo
+Regras
+como deduzir coisas novas
+Motor de resolução
+procura e deduz por você
+?- Pergunta
+Resposta
+true / false ou os valores das 
+variáveis
+4
+
+=== PAGINA 4 ===
+Fatos: as verdades da sua base
+Um fato é a menor unidade de informação. Declara, sem condições, que uma relação existe entre objetos.
+Em português:
+"João é pai de Carlos."
+Em Prolog:
+pai(joao, carlos).
+O que o Prolog guarda
+• Uma relação (pai) entre dois objetos (joao, 
+carlos)
+• Sem 'se', sem condições: é verdade e pronto
+• Vários fatos juntos formam a base de 
+conhecimento
+• O Prolog não sabe o que 'pai' significa, você 
+define
+5
+
+=== PAGINA 5 ===
+Anatomia de um fato
+Uma linha curta com regras estruturais que valem para todo o Prolog.
+pai(joao, carlos).
+Predicado (relação)
+Nomeia a conexão. Sempre começa 
+com letra minúscula.
+Argumentos (átomos)
+Objetos da relação, separados por 
+vírgula. Também em minúsculas.
+Ponto final
+Encerra a instrução. Sem ele, o 
+sistema fica esperando para sempre.
+6
+
+=== PAGINA 6 ===
+Três regras de sintaxe para não esquecer
+Minúscula = átomo ou predicado
+joao, carlos, pai, gosta são constantes. Se escrever Joao, o Prolog acha que é uma variável.
+Maiúscula = variável
+Quem, X, Pessoa, são lacunas a serem preenchidas. Veremos em detalhe nas consultas.
+Ponto final em tudo
+Fatos, regras e consultas terminam com '.'. É o sinal de 'pode guardar na memória'.
+7
+
+=== PAGINA 7 ===
+A ordem dos argumentos é você quem define
+O Prolog não entende português. A semântica de 'pai' é uma convenção sua, seja consistente.
+Convenção adotada no exemplo:
+1º argumento = genitor
+2º argumento = filho
+pai(joao, carlos).
+"João é pai de Carlos"  
+pai(carlos, joao).
+"Carlos é pai de João"  ✘ (invertido)
+Mesmos átomos, ordem trocada, significado oposto.
+8
+
+=== PAGINA 8 ===
+Do português ao Prolog
+Qualquer verdade simples do cotidiano vira um fato. Repare na quantidade de argumentos.
+Língua portuguesa Código Prolog Leitura
+Ana gosta de Prolog. gosta(ana, prolog). Predicado gosta com 2 
+átomos: ana, prolog
+A planta espada-de-são-jorge é 
+saudável.
+saudavel(espada_de_sao_jorge). Predicado de 1 argumento: 
+uma propriedade
+O notebook está na mesa. esta_em(notebook, mesa). Relação espacial entre 
+notebook e mesa
+9
+
+=== PAGINA 9 ===
+Consultas: fazendo perguntas à base
+Depois de carregar os fatos no interpretador, a base ganha vida. Perguntar = fazer uma query.
+?- pai(joao, carlos).
+true.
+?- pai(Quem, carlos).
+Quem = joao.
+?- █
+O prompt  ?-
+É o símbolo do terminal aguardando sua 
+pergunta. Tudo que você digita depois dele é 
+uma consulta.
+Dois tipos de pergunta
+• Sim ou não (verificação)
+• Exploratória (com variáveis)
+10
+
+=== PAGINA 10 ===
+Perguntas de sim ou não
+Você só quer saber se uma relação específica está na base. O Prolog varre a memória de cima para baixo.
+?- pai(joao, carlos).
+true.
+Existe um fato pai(joao, carlos). na base? Sim → 
+correspondência exata encontrada.
+?- pai(carlos, joao).
+false.
+Não há nenhum fato dizendo que Carlos é pai de João. Nada 
+encontrado → falso.
+11
+
+=== PAGINA 11 ===
+O que 'false' realmente significa
+Presunção de Mundo Fechado (Closed World Assumption)
+Quando o Prolog responde false, ele NÃO está dizendo que a afirmação é 
+falsa no mundo real.
+Ele está dizendo: "não consegui provar que isso é verdade usando apenas 
+os fatos e regras que você me forneceu".
+Tudo o que não está na base é tratado como desconhecido e desconhecido, para o Prolog, conta 
+como falso. Por isso a qualidade das suas respostas depende da completude do que você 
+declarou.
+12
+
+=== PAGINA 12 ===
+Perguntas exploratórias com variáveis
+Você não quer confirmar, quer descobrir: 'Quem é o pai de Carlos?'. Variável = palavra com inicial maiúscula.
+?- pai(Quem, carlos).
+1 Quem é uma variável livre: uma lacuna em branco
+2 Prolog percorre os fatos procurando um encaixe
+3 Encontra pai(joao, carlos). e vincula Quem = joao
+4 Exibe o resultado na tela
+A variável como gaveta
+Quem
+?
+Quem
+joao
+Quem = joao.
+'Vincular' = colocar um valor na gaveta
+13
+
+=== PAGINA 13 ===
+Mais de uma resposta: o ponto e vírgula
+Se houver várias soluções, o SWI-Prolog mostra a primeira e espera. Aperte ; para pedir a próxima.
+Fatos na base
+pai(joao, carlos).
+pai(joao, beatriz).
+pai(carlos, pedro).
+No terminal
+?- pai(joao, Filho).
+Filho = carlos ; ← você apertou ;
+Filho = beatriz ; ← de novo
+false. ← acabaram as opções
+Isso aciona o backtracking: a busca reversa 
+por alternativas, tema que será estudado 
+adiante. Enter (ou .) em vez de ;  →  encerra a consulta satisfeito com a resposta 
+atual
+14
+
+=== PAGINA 14 ===
+Regras: ensinando o Prolog a raciocinar
+Só fatos seria pouco produtivo. Uma regra diz: a conclusão é verdadeira SE as condições forem verdadeiras.
+"Alguém é avô de uma pessoa se ele é pai do pai dessa pessoa."
+avo(Avo, Neto) :- pai(Avo, Pai), pai(Pai, Neto).
+Leia como: avo(Avo, Neto) é verdade SE existe alguém (Pai) tal que Avo é pai de Pai E Pai é pai de Neto.
+15
+
+=== PAGINA 15 ===
+Anatomia de uma regra
+avo(Avo, Neto) :- pai(Avo, Pai) , pai(Pai, Neto).
+Cabeça (head)
+A conclusão: o novo conhecimento 
+que queremos inferir.
+Pescoço  :-
+O operador 'se'. Separa a 
+conclusão (esquerda) das 
+condições (direita).
+Corpo (body)
+As condições. A vírgula é o E lógico: 
+todas precisam ser verdadeiras ao 
+mesmo tempo.
+16
+
+=== PAGINA 16 ===
+Variáveis compartilhadas: o elo da regra
+Pai aparece nas duas condições. Isso obriga o Prolog a usar a MESMA pessoa nas duas relações.
+Avo Pai Neto
+pai(Avo, Pai) pai(Pai, Neto)
+avo(Avo, Neto)
+O sistema procura um indivíduo que seja, ao mesmo tempo, filho de Avo e pai de Neto. É dedução detetivesca: encontrou o 
+elo, provou o avô.
+17
+
+=== PAGINA 17 ===
+Nossa família de exemplo
+Uma árvore com quatro gerações. Nos fatos pai/2, o primeiro argumento é sempre um homem.
+joao
+carlos beatriz
+pedro ana
+lucas masculino feminino
+% --- FATOS ---
+pai(joao, carlos).
+pai(joao, beatriz).
+pai(carlos, pedro).
+pai(carlos, ana).
+pai(pedro, lucas).
+18
+
+=== PAGINA 18 ===
+Laboratório: criando familia.pl no VSCode
+Passos 1 e 2 — crie o arquivo e digite a base de conhecimento. A extensão .pl é a oficial do Prolog.
+familia.pl
+% --- FATOS ---
+pai(joao, carlos).
+pai(joao, beatriz).
+pai(carlos, pedro).
+pai(carlos, ana).
+pai(pedro, lucas).
+% --- REGRAS ---
+avo(Avo, Neto) :-
+pai(Avo, Pai),
+pai(Pai, Neto).
+Passo 1
+Abra o VSCode em uma pasta e salve um 
+arquivo novo com o nome exato familia.pl.
+Passo 2
+Digite o código. Confira pontos finais e letras 
+minúsculas. Linhas com % são comentários.
+19
+
+=== PAGINA 19 ===
+Laboratório: carregando e consultando
+Passos 3 e 4 — abra o terminal integrado (Ctrl+'), inicie o SWI-Prolog e veja o computador pensar.
+$ swipl
+?- [familia].
+true.
+?- avo(joao, Neto).
+Neto = pedro ;
+Neto = ana ;
+false.
+?- avo(carlos, Neto).
+Neto = lucas.
+Passo 3 · Iniciar
+swipl abre o interpretador; o prompt vira 
+?-.
+Passo 3 · Carregar
+[familia]. compila o arquivo (sem a 
+extensão .pl). Resposta true = sucesso.
+Passo 4 · Consultar
+avo(joao, Neto). traz o 1º neto; ; pede o 
+próximo; false encerra.
+20
+
+=== PAGINA 20 ===
+Por dentro: resolvendo avo(joao, Neto)
+Avo já chega vinculado a joao. Falta encontrar Pai e Neto que satisfaçam as duas condições.
+1 pai(joao, Pai) Pai = carlos
+2 pai(carlos, Neto) Neto = pedro
+ 1ª resposta
+3 ; → pai(carlos, Neto) de novo Neto = ana
+ 2ª resposta
+4 ; → volta e tenta Pai = beatriz pai(beatriz, Neto)? não há → false
+21
+
+=== PAGINA 21 ===
+Recapitulando
+Fatos
+pai(joao, carlos).
+Verdades sem condição. Minúsculas e ponto final.
+Consultas
+?- pai(joao, carlos).
+Sim/não. false = 'não consegui provar'.
+Variáveis
+?- pai(Quem, carlos).
+Maiúscula = lacuna. ; pede a próxima solução.
+Regras
+avo(A, N) :- pai(A, P), pai(P , N).
+Cabeça SE corpo. Vírgula = E.
+22
+
+=== PAGINA 22 ===
+Desafio 1 · Gênero na família
+Fácil
+Adicione novos fatos ao seu familia.pl e teste consultas de confirmação e de descoberta.
+O que fazer
+• Mapeie o gênero de cada personagem com fatos 
+feminino/1 e masculino/1
+• Cubra todos: joao, carlos, beatriz, pedro, ana e lucas
+• Teste uma consulta de sim/não: ?- feminino(ana).
+• Teste uma consulta de descoberta: ?- masculino(X). e 
+percorra com ;
+Exemplo de partida
+feminino(beatriz).
+feminino(ana).
+masculino(joao).
+% complete os demais...
+Dica: depois de editar o arquivo, recarregue com 
+[familia]. no terminal, senão as consultas usam a 
+versão antiga.
+24
+
+=== PAGINA 23 ===
+Desafio 2 · A regra bisavo/2
+Médio
+Pense declarativamente: como encadear apenas predicados pai/2 para ligar três gerações?
+O que fazer
+• Escreva a regra bisavo(Bisavo, Bisneto) usando só 
+pai/2 no corpo
+• Quantas condições o corpo precisa ter? Quais 
+variáveis intermediárias?
+• Teste no terminal: quem são os bisnetos de João?
+• Compare com a estrutura de avo/2 — o padrão se 
+repete
+bisavo(Bisavo, Bisneto) :-
+% ... complete o corpo
+Bisavo ? ? Bisneto
+Consulta esperada: ?- bisavo(joao, Quem). deve responder 
+Quem = lucas.
+25
+
+=== PAGINA 24 ===
+Desafio 3 · Biblioteca
+Difícil
+Crie recomendacoes.pl: uma pequena biblioteca com fatos e regras de recomendação.
+Base de fatos
+• Pelo menos 15 livros no formato livro(Titulo, Genero, 
+Autor)
+• Vários gêneros e vários autores
+livro(dom_casmurro,
+romance, machado_de_assis).
+livro(o_hobbit,
+fantasia, tolkien).
+Regras a implementar
+• gosta_romance/1, gosta_fantasia/1, 
+gosta_ficcao_cientifica/1
+• livro_de_shakespeare/1 e livro_de_tolkien/1
+• mesmo_autor/2 e mesmo_genero/2
+• recomendar_outro/3: recebe um livro e sugere outros 
+do mesmo gênero — sem recomendar o próprio livro
+• Use variáveis: uma regra genérica, não uma por livro
+26
+
+=== PAGINA 25 ===
+Desafio 3 · Consultas para observar
+Depois de implementar, rode as consultas e repare como fatos, variáveis, unificação e backtracking trabalham 
+juntos.
+?- gosta_fantasia(L).
+?- livro_de_tolkien(L).
+?- mesmo_autor(L1, L2).
+?- mesmo_genero(dom_casmurro, L).
+?- recomendar_outro(o_hobbit, G, R).
+% Percorra cada resposta com ;
+Observe
+Em mesmo_autor/2, o próprio livro aparece 
+pareado consigo mesmo? Como evitar?
+Pista
+Para 'garantir que não é o mesmo livro', 
+pesquise o operador \= (diferente).
+27

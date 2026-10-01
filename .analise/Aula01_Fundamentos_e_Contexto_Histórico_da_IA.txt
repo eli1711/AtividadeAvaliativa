@@ -1,0 +1,169 @@
+=== PAGINA 1 ===
+SISTEMAS BASEADOS
+EM CONHECIMENTO
+Aula 1 — Fundamentos e Contexto Histórico da IA
+Pós-graduação em Inteligência Artificial
+
+=== PAGINA 2 ===
+Objetivos de um curso de Pós-graduação
+1. Construção de rede profissional qualificada
+2. Troca de experiências entre diferentes realidades de mercado
+3. Aprendizado horizontal, entre pares
+4. Formação de grupos de apoio para além da sala de aula
+5. Exposição a diferentes formas de pensar e resolver problemas
+
+=== PAGINA 3 ===
+Antes de começar…
+
+
+=== PAGINA 4 ===
+Você já usou (ou usa) algum
+sistema que “decide” algo por
+você?
+
+=== PAGINA 5 ===
+O que é Inteligência Artificial, afinal?
+Definição
+“Sistemas capazes de tomar decisões
+ou resolver problemas que, se fossem
+feitos por uma pessoa, diríamos que
+exigem conhecimento e raciocínio.”
+Duas grandes famílias:
+• IA simbólica: regras e conhecimento explícito
+(foco desta unidade)
+• IA conexionista: aprendizado a partir de dados
+(redes neurais, ML)
+Nesta unidade curricular:
+Vamos estudar a família simbólica:
+sistemas que raciocinam a partir de
+regras e conhecimento explícito escrito
+por especialistas — os Sistemas
+Baseados em Conhecimento (SBC).
+Você não precisa saber programar hoje.
+Precisa entender a ideia.
+
+=== PAGINA 6 ===
+Linha do tempo
+1956
+Conferência de 
+Dartmouth
+Nasce o termo 
+“Inteligência 
+Artificial”
+1965
+DENDRAL
+1º sistema 
+especialista 
+(química)
+1966
+ELIZA
+1º chatbot, 
+baseado em 
+regras simples
+1976
+MYCIN
+Sistema 
+especialista para 
+diagnóstico 
+médico
+1980
+XCON
+SE que 
+economizava US$ 
+40 mi/ano na DEC
+1987
+Inverno da IA
+Sistemas 
+especialistas 
+ficam caros e 
+frágeis
+Ideia central: entre 1965 e 1985, a aposta era “se conseguirmos escrever o conhecimento de um especialista em 
+regras, o computador pode raciocinar como ele”.
+
+=== PAGINA 7 ===
+1965 · Stanford
+DENDRAL
+O primeiro sistema especialista da 
+história
+Ajudava químicos a descobrir a estrutura de moléculas desconhecidas a partir
+de dados de espectrometria de massa — uma tarefa que exigia anos de
+experiência de um especialista humano.
+Em vez de calcular “cegamente” todas as possibilidades, o DENDRAL usava
+regras heurísticas escritas com químicos reais para descartar hipóteses
+improváveis.
+Por que importa para nós
+Mostra a ideia-base de um SBC: capturar o “como pensa” de um
+especialista em forma de regras explícitas.
+
+=== PAGINA 8 ===
+1976 · Stanford
+MYCIN
+Diagnóstico médico por regras
+Sistema especialista que recomendava antibióticos para infecções bacterianas, 
+perguntando sintomas e resultados de exames — em alguns estudos, teve 
+desempenho comparável ao de médicos especialistas.
+Funcionava com um mecanismo de encadeamento de regras do tipo “se os 
+sintomas são X e Y , então a hipótese Z é provável”.
+Por que importa para nós
+É o exemplo clássico de sistema especialista com explicação: o MYCIN
+conseguia justificar sua recomendação — algo raro até hoje em IA.
+
+=== PAGINA 9 ===
+1980 · Digital Equipment
+Corp.
+XCON
+Sistema especialista com retorno 
+financeiro real
+Configurava automaticamente pedidos complexos de computadores,
+verificando compatibilidade entre milhares de peças — tarefa antes feita
+manualmente, com muitos erros.
+Chegou a processar a maior parte dos pedidos da empresa, evitando erros de
+configuração caros.
+Por que importa para nós
+Prova de que SBC não é só teoria acadêmica: gerava economia estimada em
+dezenas de milhões de dólares por ano para a empresa.
+
+=== PAGINA 10 ===
+Atividade prática
+Converse com a ELIZA
+O primeiro chatbot da história (1966) — baseado em regras simples de padrão e 
+substituição, sem nenhum aprendizado.
+1. Implemente o algoritmo do aplicativo ELIZA
+2. Anote uma resposta da ELIZA que pareceu “inteligente”
+3. Discuta: ela entendeu o que você disse ou só reorganizou suas palavras?
+4. Compare com uma resposta de um assistente de IA atual sobre o mesmo assunto
+
+=== PAGINA 11 ===
+Então, o que é um Sistema Baseado em Conhecimento?
+Base de Conhecimento
+Onde ficam as regras e fatos
+escritos com o especialista
+Motor de Inferência
+O “raciocinador” que aplica as
+regras aos dados de entrada
+Interface de Explicação
+Mostra por que o sistema
+chegou àquela conclusão
+Vamos detalhar essa arquitetura por completo mais adiante no curso — hoje, guarde só a ideia geral.
+
+=== PAGINA 12 ===
+DESAFIO EM GRUPO
+Vocês receberão casos reais de aplicação de IA (saúde, indústria, varejo, agro...).
+1
+Classifiquem
+É mais parecido com um SBC (regras explícitas) ou com IA baseada em dados (aprendizado)?
+2
+Justifiquem
+O que no caso te fez decidir isso? Cite uma “pista” do texto.
+3
+Apresentem
+3 minutos por dupla, para toda a turma, explicando a decisão.
+
+=== PAGINA 13 ===
+Recapitulando
+De regras escritas à mão
+até os SBCs de hoje
+• IA simbólica nasce nos anos 1950-60 tentando codificar o raciocínio humano em regras
+• DENDRAL, MYCIN e XCON mostram aplicações reais, com resultados mensuráveis
+• Um SBC tem base de conhecimento + motor de inferência + explicação
+• Próxima aula: como representar e resolver problemas formalmente

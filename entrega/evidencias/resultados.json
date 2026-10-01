@@ -1,0 +1,490 @@
+{
+  "verificacoes": 298,
+  "casos": [
+    {
+      "previsto": [
+        "r01"
+      ],
+      "obtido": {
+        "caso": "c01",
+        "hipoteses": [
+          {
+            "hipotese": "sobrecarga",
+            "regra": "r01",
+            "frase": "Hipótese de sobrecarga sugerida porque foram observados temperatura elevada, corrente elevada, conforme a regra R01; esta é uma triagem inicial e não um laudo."
+          }
+        ],
+        "estados": [
+          "aguardando_ocorrencia",
+          "em_triagem",
+          "hipotese_identificada",
+          "encaminhado_para_inspecao"
+        ],
+        "prioridade": "normal",
+        "mensagem": "Hipótese de sobrecarga sugerida porque foram observados temperatura elevada, corrente elevada, conforme a regra R01; esta é uma triagem inicial e não um laudo."
+      }
+    },
+    {
+      "previsto": [
+        "r02"
+      ],
+      "obtido": {
+        "caso": "c02",
+        "hipoteses": [
+          {
+            "hipotese": "mecanica",
+            "regra": "r02",
+            "frase": "Hipótese de ocorrência mecânica sugerida porque foram observados vibração elevada, ruído anormal, conforme a regra R02; esta é uma triagem inicial e não um laudo."
+          }
+        ],
+        "estados": [
+          "aguardando_ocorrencia",
+          "em_triagem",
+          "hipotese_identificada",
+          "encaminhado_para_inspecao"
+        ],
+        "prioridade": "normal",
+        "mensagem": "Hipótese de ocorrência mecânica sugerida porque foram observados vibração elevada, ruído anormal, conforme a regra R02; esta é uma triagem inicial e não um laudo."
+      }
+    },
+    {
+      "previsto": [
+        "r03"
+      ],
+      "obtido": {
+        "caso": "c03",
+        "hipoteses": [
+          {
+            "hipotese": "hidraulica",
+            "regra": "r03",
+            "frase": "Hipótese de problema hidráulico sugerida porque foram observados equipamento do tipo bomba, fluxo reduzido, ruído anormal, conforme a regra R03; esta é uma triagem inicial e não um laudo."
+          }
+        ],
+        "estados": [
+          "aguardando_ocorrencia",
+          "em_triagem",
+          "hipotese_identificada",
+          "encaminhado_para_inspecao"
+        ],
+        "prioridade": "normal",
+        "mensagem": "Hipótese de problema hidráulico sugerida porque foram observados equipamento do tipo bomba, fluxo reduzido, ruído anormal, conforme a regra R03; esta é uma triagem inicial e não um laudo."
+      }
+    },
+    {
+      "previsto": [
+        "r02",
+        "r04"
+      ],
+      "obtido": {
+        "caso": "c04",
+        "hipoteses": [
+          {
+            "hipotese": "condicao_critica",
+            "regra": "r04",
+            "frase": "Hipótese de condição crítica sugerida porque foram observados temperatura elevada, vibração elevada, ruído anormal, conforme a regra R04; esta é uma triagem inicial e não um laudo."
+          },
+          {
+            "hipotese": "mecanica",
+            "regra": "r02",
+            "frase": "Hipótese de ocorrência mecânica sugerida porque foram observados vibração elevada, ruído anormal, conforme a regra R02; esta é uma triagem inicial e não um laudo."
+          }
+        ],
+        "estados": [
+          "aguardando_ocorrencia",
+          "em_triagem",
+          "hipoteses_concorrentes",
+          "encaminhado_para_inspecao"
+        ],
+        "prioridade": "prioritária",
+        "mensagem": "Hipótese de condição crítica sugerida porque foram observados temperatura elevada, vibração elevada, ruído anormal, conforme a regra R04; esta é uma triagem inicial e não um laudo.\nHipótese de ocorrência mecânica sugerida porque foram observados vibração elevada, ruído anormal, conforme a regra R02; esta é uma triagem inicial e não um laudo."
+      }
+    },
+    {
+      "previsto": [],
+      "obtido": {
+        "caso": "c05",
+        "hipoteses": [],
+        "estados": [
+          "aguardando_ocorrencia",
+          "em_triagem",
+          "triagem_inconclusiva",
+          "encaminhado_para_inspecao"
+        ],
+        "prioridade": "normal",
+        "mensagem": "Não foi possível sustentar hipótese porque nenhuma regra teve todas as suas condições estabelecidas pelos fatos disponíveis. A ausência de prova não demonstra a hipótese oposta. Esta é uma triagem inicial e não um laudo."
+      }
+    },
+    {
+      "previsto": [],
+      "obtido": {
+        "caso": "c06",
+        "hipoteses": [],
+        "estados": [
+          "aguardando_ocorrencia",
+          "em_triagem",
+          "triagem_inconclusiva",
+          "encaminhado_para_inspecao"
+        ],
+        "prioridade": "normal",
+        "mensagem": "Não foi possível sustentar hipótese porque nenhuma regra teve todas as suas condições estabelecidas pelos fatos disponíveis. A ausência de prova não demonstra a hipótese oposta. Esta é uma triagem inicial e não um laudo."
+      }
+    },
+    {
+      "previsto": [
+        "r02",
+        "r03",
+        "r04"
+      ],
+      "obtido": {
+        "caso": "c07",
+        "hipoteses": [
+          {
+            "hipotese": "condicao_critica",
+            "regra": "r04",
+            "frase": "Hipótese de condição crítica sugerida porque foram observados temperatura elevada, vibração elevada, ruído anormal, conforme a regra R04; esta é uma triagem inicial e não um laudo."
+          },
+          {
+            "hipotese": "mecanica",
+            "regra": "r02",
+            "frase": "Hipótese de ocorrência mecânica sugerida porque foram observados vibração elevada, ruído anormal, conforme a regra R02; esta é uma triagem inicial e não um laudo."
+          },
+          {
+            "hipotese": "hidraulica",
+            "regra": "r03",
+            "frase": "Hipótese de problema hidráulico sugerida porque foram observados equipamento do tipo bomba, fluxo reduzido, ruído anormal, conforme a regra R03; esta é uma triagem inicial e não um laudo."
+          }
+        ],
+        "estados": [
+          "aguardando_ocorrencia",
+          "em_triagem",
+          "hipoteses_concorrentes",
+          "encaminhado_para_inspecao"
+        ],
+        "prioridade": "prioritária",
+        "mensagem": "Hipótese de condição crítica sugerida porque foram observados temperatura elevada, vibração elevada, ruído anormal, conforme a regra R04; esta é uma triagem inicial e não um laudo.\nHipótese de ocorrência mecânica sugerida porque foram observados vibração elevada, ruído anormal, conforme a regra R02; esta é uma triagem inicial e não um laudo.\nHipótese de problema hidráulico sugerida porque foram observados equipamento do tipo bomba, fluxo reduzido, ruído anormal, conforme a regra R03; esta é uma triagem inicial e não um laudo."
+      }
+    }
+  ],
+  "tabela_r04": [
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  ]
+}

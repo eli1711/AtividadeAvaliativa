@@ -1,0 +1,12 @@
+stateDiagram-v2
+    [*] --> Aguardando_ocorrencia
+    Aguardando_ocorrencia --> Em_triagem: ocorrencia_registrada
+    Em_triagem --> Triagem_inconclusiva: nenhuma_regra_satisfeita
+    Em_triagem --> Hipotese_identificada: uma_regra_satisfeita
+    Em_triagem --> Hipoteses_concorrentes: varias_regras_satisfeitas
+    Hipotese_identificada --> Encaminhado_para_inspecao: encaminhamento_normal ou prioritario
+    Hipoteses_concorrentes --> Encaminhado_para_inspecao: criterio_aplicado_normal ou prioritario
+    Triagem_inconclusiva --> Em_triagem: coleta_complementar
+    Triagem_inconclusiva --> Encaminhado_para_inspecao: encaminhamento_sem_hipotese
+    Encaminhado_para_inspecao --> Encerrado: inspecao_finalizada
+    Encerrado --> [*]

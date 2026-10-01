@@ -1,0 +1,2 @@
+298 verificações aprovadas.
+SWI-Prolog real, 7 casos, duas evoluções, 256 avaliações de antecedentes, 32 linhas da tabela-verdade, 11 transições e rejeição de evento inválido.

@@ -1,0 +1,590 @@
+=== PAGINA 1 ===
+
+
+=== PAGINA 2 ===
+Linguagem Natural
+“Se o cliente for especial, conceda o benefício quando a compra for alta.”
+O que significa “especial”?
+O que significa “compra alta”?
+“quando” indica uma condição suficiente, necessária ou ambas?
+Duas pessoas podem implementar regras diferentes a partir da mesma frase?
+
+=== PAGINA 3 ===
+Linguagem Natural × Lógica Proposicional
+LINGUAGEM NATURAL
+Rica em contexto, flexível e adequada à 
+comunicação humana.
+Pode conter ambiguidades, pressupostos e 
+expressões cujo significado depende da situação.
+LÓGICA PROPOSICIONAL
+Linguagem formal para representar proposições e 
+suas relações por conectivos.
+Na lógica clássica bivalente usada nesta aula, as 
+fórmulas são avaliadas como verdadeiras ou 
+falsas.
+A formalização não elimina toda incerteza do mundo real. Ela torna explícitas as 
+relações que escolhemos representar e analisar.
+
+=== PAGINA 4 ===
+Lógica Proposicional × Lógica Booleana
+Duas perspectivas sobre o mesmo raciocínio binário — e por que parecem a mesma coisa
+Dimensão Lógica Proposicional Lógica / Álgebra Booleana
+O que é Sistema lógico (sintaxe + semântica + prova) Estrutura algébrica (conjunto + operações)
+Pergunta central Esse argumento é válido? Como simplifico essa expressão?
+Notação típica P , Q, R · ∧ ∨ ¬ → 
+ · V/F 0, 1 · + · complemento (¬A)
+Conectivo central → condicional (essencial p/ inferência) XOR/NAND/NOR (essenciais p/ portas lógicas)
+Ferramentas Dedução natural, tabela-verdade Mapas de Karnaugh, minimização de circuitos
+Aplicação típica Argumentação, IA simbólica, verificação formal Circuitos digitais, chips, código (&&, ||)
+Origem Filosofia — Frege, Russell (séc. XIX-XX) Boole (1854) → Shannon (1937)
+A conexão: a semântica da lógica proposicional clássica (V/F) é, matematicamente, uma álgebra booleana de dois 
+elementos — por isso os dois campos compartilham quase todo o vocabulário técnico.
+3
+
+=== PAGINA 5 ===
+Proposição e bivalência
+Para esta introdução, trataremos uma proposição como aquilo que é expresso por uma
+sentença declarativa e que pode receber valor de verdade.
+F / 0
+FALSO
+V / 1
+VERDADEIRO
+É proposição:
+“O sistema está ativo.”
+Não é proposição:
+“Ative o sistema!” (ordem)
+Não é proposição:
+“O sistema está ativo?” (pergunta)
+“x > 10” (sentença aberta)
+
+=== PAGINA 6 ===
+É proposição ou não?
+Classifique cada frase e justifique: ela pode receber um valor de verdade no contexto
+apresentado?
+1. “A máquina está ligada. ”
+2. “Ligue a máquina. ”
+3. “A máquina está ligada?”
+4. “O pedido foi aprovado. ”
+5. “x > 10”
+
+=== PAGINA 7 ===
+Proposição atômica × proposição composta
+ATÔMICA
+Tratada como unidade não decomposta na
+linguagem formal.
+P: “O sensor está ativo.”
+COMPOSTA
+Formada combinando proposições por
+conectivos.
+P ∧ Q
+“Atômica” é uma noção da representação formal: uma frase linguisticamente longa ainda
+pode ser tratada como um único átomo.
+
+=== PAGINA 8 ===
+Variáveis proposicionais
+Usamos letras para representar proposições.
+P
+“O pagamento foi 
+confirmado. ”
+Q
+“O produto está 
+disponível. ”
+R
+O acesso é liberado.
+IMPORTANTE
+A letra é apenas um rótulo. O significado vem da proposição que definimos para ela.
+
+=== PAGINA 9 ===
+Tabela de Conectivos
+
+
+=== PAGINA 10 ===
+Conectivos
+lógicos
+¬ Negação não
+∧ Conjunção e
+∨ Disjunção ou
+→ Condicional se... então
+Bicondicional se e somente se
+
+=== PAGINA 11 ===
+Como ler
+expressões
+¬P “não P”
+P ∧ Q “P e Q”
+P ∨ Q “P ou Q”
+P → Q “se P , então Q”
+P 
+ Q “P se e somente se Q”
+
+=== PAGINA 12 ===
+¬P
+P ¬P
+V F
+F V
+¬P — Negação (NÃO / !)
+Simplesmente inverte o valor.
+O “Não” da Lógica Proposicional
+
+=== PAGINA 13 ===
+O “E” da Lógica Proposicional
+P ∧ Q
+Ao contrário do OU, a conjunção não tem ambiguidade entre "inclusivo" e 
+"exclusivo" — ela é sempre a mesma coisa: P ∧ Q só é verdadeira quando as 
+duas são verdadeiras ao mesmo tempo. Não existe uma segunda interpretação 
+clássica concorrente como acontece com o ∨.
+P Q P ∧ Q
+V V V
+V F F
+F V F
+F F F
+Só é verdadeira quando as duas são verdadeiras. 
+Uma falsa já derruba tudo.
+
+=== PAGINA 14 ===
+O “OU” da Lógica Proposicional
+P ∨ Q
+Na lógica clássica, ∨ é normalmente inclusivo: P ou Q ou ambos.
+A linguagem cotidiana às vezes usa “ou” com sentido exclusivo.
+Antes de formalizar, pergunte: os dois podem ocorrer ao mesmo tempo?
+P Q P V Q
+V V V
+V F V
+F V V
+F F F
+É verdadeira quando pelo menos uma é verdadeira. Só 
+é falsa quando as duas são falsas. (É o "ou" inclusivo.)
+
+=== PAGINA 15 ===
+Condicional: antecedente e 
+consequente
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+P → Q
+P = antecedente
+condição apresentada depois de “se”
+Q = consequente
+resultado apresentado depois de 
+“então”
+P → Q não é a mesma coisa que Q → P .
+
+=== PAGINA 16 ===
+Condicional
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+P → Q
+P Q P →Q
+V V V
+V F F
+F V V
+F F V
+Essa é a que mais confunde: só é falsa quando P é verdadeiro e Q 
+é falso. Em todos os outros casos — inclusive quando P é falso — o 
+condicional é verdadeiro (isso se chama "verdade vacuosa": uma 
+promessa não é quebrada se a condição nunca aconteceu).
+
+=== PAGINA 17 ===
+“Se” , “somente se” e “se e somente se”
+P se Q  Q → P
+P somente se Q  P → Q
+P se e somente se Q  P 
+ Q
+Necessário e suficiente: a direção do condicional altera o significado.
+Exemplo: “Para receber o certificado, o aluno precisa ser aprovado. ”  C = recebe certificado; A = 
+aprovado  →  C → A.  Aprovação é necessária; o texto não diz que A → C.
+
+=== PAGINA 18 ===
+Regras para juntar os símbolos
+Se P é fórmula, então ¬P é fórmula.
+Se A e B são fórmulas, então (A ∧ B), (A ∨ B), (A → B) e (A 
+ B) são fórmulas.
+Parênteses tornam explícito o agrupamento.
+Nem toda sequência de símbolos é uma fórmula bem formada.
+Ex.: (P ∧ Q) → R  ✓ P ∧ → Q  ✗
+
+=== PAGINA 19 ===
+Como encontrar o conectivo principal
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+(P ∧ Q) → ¬R
+1. Observe os parênteses e subexpressões.
+2. Pergunte qual operação combina as maiores partes da fórmula.
+3. Neste exemplo, o conectivo principal é →.
+4. P ∧ Q é o antecedente; ¬R é o consequente.
+
+=== PAGINA 20 ===
+Negação e escopo
+¬P ¬(P ∧ Q) (¬P) ∧ Q
+“não P” “não é verdade que P e Q”
+“não P , e Q”
+(negação de P em 
+conjunção com Q)
+A negação atua somente sobre a fórmula que está em seu 
+escopo.
+
+=== PAGINA 21 ===
+Parênteses e agrupamento
+¬(P ∧ Q)   ≠   (¬P) ∧ Q
+Parênteses indicam quais partes devem ser interpretadas juntas.
+Convenções de precedência podem variar entre textos e ferramentas.
+Na aula, prefira parênteses explícitos quando houver risco de ambiguidade.
+
+=== PAGINA 22 ===
+Sintaxe: Fórmula Bem Formada (FBF)
+Sintaxe responde: “esta sequência de símbolos pertence à linguagem 
+formal que definimos?”
+(P ∧ Q) → R  ✓ P ∧ → Q  ✗
+FBF = well-formed formula / fórmula bem formada.
+
+=== PAGINA 23 ===
+Estrutura de uma fórmula
+(P ∧ Q) → ¬R
+Átomos
+P • Q • R
+Subfórmulas
+P∧Q • ¬R
+Principal
+→
+
+=== PAGINA 24 ===
+Sintaticamente correta ≠ representa corretamente a regra
+E → (C ∧ T) (C ∧ T) → E
+As duas podem ser FBF .
+Mas elas não dizem a mesma coisa. Formalizar exige preservar a 
+intenção da regra.
+
+=== PAGINA 25 ===
+Prática 1 — Negação
+“O equipamento não está ligado. ”
+L = O equipamento está ligado. ¬L
+
+=== PAGINA 26 ===
+Prática 2 — Conjunção
+“O pedido foi aprovado e o pagamento foi confirmado. ”
+A = pedido aprovado
+P = pagamento confirmado A ∧ P
+
+=== PAGINA 27 ===
+Prática 3 — Condicional
+“Se a temperatura ultrapassar o limite, então o alarme será acionado. ”
+T = temperatura acima do limite
+A = alarme acionado T → A
+
+=== PAGINA 28 ===
+Prática 4 — Composição
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+“Se o pagamento foi confirmado e o produto está disponível, então o 
+pedido pode ser liberado. ”
+P = pagamento confirmado
+D = produto disponível
+L = pedido liberado
+(P ∧ D) → L
+
+=== PAGINA 29 ===
+Da sintaxe para a semântica
+Como sabemos quando uma expressão é verdadeira?
+
+=== PAGINA 30 ===
+Da sintaxe para a semântica
+SINTAXE
+Como a expressão é construída?
+SEMÂNTICA
+Quando a expressão é verdadeira
+ou falsa?
+A tabela-verdade conecta a fórmula às possíveis atribuições de valores de 
+verdade.
+
+=== PAGINA 31 ===
+O que é uma tabela-verdade?
+Enumera sistematicamente as combinações possíveis de V/F para as variáveis.
+Avalia o valor da expressão em cada combinação.
+Permite visualizar em quais situações a fórmula é satisfeita ou torna-se falsa.
+Não é apenas uma tabela para “decorar V e F”: é uma ferramenta de análise 
+semântica.
+
+=== PAGINA 32 ===
+Quantas linhas terá a tabela?
+2ⁿ
+n = número de variáveis proposicionais distintas
+2 variáveis → 4 linhas
+3 variáveis → 8 linhas
+4 variáveis → 16 linhas
+
+=== PAGINA 33 ===
+Exemplo com 2 variáveis — P ∧ Q
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+P Q P ∧ Q
+V V V
+V F F
+F V F
+F F F
+Leitura: P ∧ Q é verdadeira somente quando P e Q são verdadeiras.
+
+=== PAGINA 34 ===
+Exemplo com 3 variáveis — (P ∧ Q) → R
+P Q R P∧Q (P∧Q)→R
+V V V V V
+V V F V F
+V F V F V
+V F F F V
+F V V F V
+F V F F V
+F F V F V
+F F F F V
+Calcule primeiro a subexpressão P∧Q; depois avalie o condicional.
+
+=== PAGINA 35 ===
+
+
+=== PAGINA 36 ===
+Exemplo contextualizado — Alerta industrial
+Antes de calcular, identifique o que é condição e o que é comportamento observado.
+REGRA DE NEGÓCIO
+“Se houver temperatura elevada e a refrigeração estiver inativa, então o alerta deve ser 
+acionado. ”
+T = temperatura elevada R = refrigeração ativa A = alerta acionado
+(T ∧ ¬R) → A
+Leitura: se T for verdadeiro e R for falso, então A deve ser verdadeiro.
+
+=== PAGINA 37 ===
+A é o resultado. Por que ainda é uma proposição?
+A resposta depende do que queremos fazer: calcular uma saída ou verificar uma regra.
+(T ∧ ¬R) → A
+ANTECEDENTE
+T ∧ ¬R
+Condição que ativa a obrigação da regra.
+CONSEQUENTE
+A
+Resultado/comportamento que deve ocorrer 
+quando o antecedente é verdadeiro.
+Importante: a fórmula não está calculando A. Ela está verificando se um valor observado 
+ou proposto para A é compatível com a regra.
+
+=== PAGINA 38 ===
+Duas modelagens diferentes — não confundir
+A mesma situação pode ser representada de maneiras diferentes conforme o objetivo.
+1 • SISTEMA QUE CALCULA A SAÍDA
+A = T ∧ ¬R
+T e R são entradas.
+A é calculado diretamente.
+Aqui, o alerta ocorre exatamente quando
+T é V e R é F .
+2 • REGRA QUE AUDITA O COMPORTAMENTO
+(T ∧ ¬R) → A
+T, R e A são valores avaliados.
+A pode ter sido observado ou proposto.
+A regra verifica se o comportamento é 
+compatível.
+Para a atividade com IA, queremos AUDITAR uma decisão. Por isso usamos a segunda 
+modelagem.
+
+=== PAGINA 39 ===
+Por que a tabela possui 3 variáveis e 8 linhas?
+Tabela-verdade avalia todas as proposições atômicas presentes na fórmula.
+T R A são três proposições atômicas distintas
+2ⁿ = 2³ = 8 combinações
+Se usássemos apenas T e R, estaríamos calculando A = T ∧ ¬R.
+Mas em (T ∧ ¬R) → A queremos testar também o valor de A.
+Em qual combinação a regra deve falhar?
+
+=== PAGINA 40 ===
+T R A ¬R
+V V V F
+V V F F
+V F V V
+V F F V
+F V V F
+F V F F
+F F V V
+F F F V
+T R A ¬R T ∧ ¬R
+V V V F F
+V V F F F
+V F V V V
+V F F V V
+F V V F F
+F V F F F
+F F V V F
+F F F V F
+Tabela-verdade — verificando o alerta industrial
+A regra só é falsa quando a condição ocorre e o alerta não é acionado.
+VIOLAÇÃO: T=V, R=F , A=F → (V ∧ V) → F → V → F = F
+T R A ¬R T ∧ ¬R (T ∧ ¬R) → A
+V V V F F V
+V V F F F V
+V F V V V V
+V F F V V F
+F V V F F V
+F V F F F V
+F F V V F V
+F F F V F V
+
+=== PAGINA 41 ===
+Caso João — pense antes da LLM
+CREDENCIAL: SIM
+TREINAMENTO: NÃO
+BLOQUEADO: NÃO
+Pergunta à turma: João pode entrar? Qual regra sustenta sua resposta?
+
+=== PAGINA 42 ===
+Prompt 1 — LLM como geradora de decisão
+Uma empresa possui a seguinte política de acesso ao laboratório:
+• Para entrar, o usuário precisa possuir credencial válida e ter concluído o treinamento de 
+segurança.
+• Usuários bloqueados não podem entrar.
+João possui credencial válida, não concluiu o treinamento e não está bloqueado.
+João pode entrar? Explique detalhadamente quais condições da política você considerou.
+Depois da resposta: “Como sabemos que está correta sem usar a própria LLM como autoridade?”
+
+=== PAGINA 43 ===
+Extraindo as proposições
+C = usuário possui credencial válida
+T = usuário concluiu treinamento
+B = usuário está bloqueado
+E = entrada está autorizada
+
+=== PAGINA 44 ===
+Formalizando as regras
+R1: E → (C ∧ T) R2: B → ¬E
+R1: “Se a entrada está autorizada, então
+credencial e treinamento devem estar
+presentes.”
+R2: “Se o usuário está bloqueado, então a 
+entrada não está autorizada.”
+Necessário ≠ suficiente. A direção do condicional importa.
+
+=== PAGINA 45 ===
+Tabela de R2 — onde está a violação?
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+B E ¬E B→¬E
+V V F F
+V F V V
+F V F V
+F F V V
+B=V e E=V → V→F = F → usuário bloqueado foi autorizado: regra violada.
+
+=== PAGINA 46 ===
+Tabela de R1 — requisitos necessários
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+E C T C∧T E→(C∧T)
+V V V V V
+V V F F F
+V F V F F
+V F F F F
+F V V V V
+F V F F V
+F F V F V
+F F F F V
+R1 é violada quando E=V, mas C∧T=F.
+
+=== PAGINA 47 ===
+Caso Maria — uma regra passa, outra falha
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+C=V   T=V   B=V   |   LLM propõe E=V
+R1: V → (V ∧ V) = V R2: V → ¬V = V → F = F
+A decisão satisfaz R1, mas viola R2 → INCOMPATÍVEL com o 
+conjunto de regras.
+
+=== PAGINA 48 ===
+O conjunto de restrições
+[E → (C ∧ T)] ∧ [B → ¬E]
+Leitura: “a Regra 1 e a Regra 2 devem ser satisfeitas simultaneamente.”
+Passar em uma regra não compensa violar outra.
+
+=== PAGINA 49 ===
+Ferramenta lógica: conferir, não terceirizar o raciocínio
+1. Construir a tabela manualmente.
+2. Inserir B → ¬E em um editor lógico.
+3. Comparar linha por linha.
+4. Repetir com E → (C ∧ T).
+5. Se houver divergência, voltar às definições formais.
+Ferramenta = laboratório de conferência. Não = substituto da compreensão.
+
+=== PAGINA 50 ===
+Prompt 2 — LLM como auxiliar de formalização
+Analise a política usando Lógica Proposicional clássica.
+1. Identifique as proposições.
+2. Atribua variáveis.
+3. Identifique conectivos.
+4. Diferencie condições necessárias e suficientes.
+5. Formalize cada regra.
+6. Traduza cada fórmula para linguagem natural.
+7. Informe ambiguidades.
+Não acrescente condições não presentes.
+AUDITORIA: fórmula → leitura → tradução reversa → comparação com a política original.
+
+=== PAGINA 51 ===
+Tradução reversa — técnica de auditoria
+(C ∧ T) → E
+“Se possui credencial e treinamento, então a entrada é autorizada. ”
+Compare com: “Para entrar, precisa possuir credencial e treinamento. ”
+Pergunta: a fórmula acrescentou uma garantia que a política não deu?
+
+=== PAGINA 52 ===
+Prompt 3 — LLM como auditora
+ENCONTRO 02 • LÓGICA PROPOSICIONAL I
+Regras: R1: E → (C ∧ T); R2: B → ¬E.
+Caso: C=V , T=V , B=V . Uma primeira LLM recomendou E=V .
+1. Substitua os valores.
+2. Verifique R1 e R2 separadamente.
+3. Compare com a semântica dos conectivos.
+4. Classifique a decisão como COMPATÍVEL ou INCOMPATÍVEL.
+5. Não utilize informações externas.
+6. Justifique pela regra.
+Depois: comparar a auditoria da LLM com a tabela já construída pela turma.
+
+=== PAGINA 53 ===
+Três tipos de problema — não misturar
+LÓGICO
+A decisão viola uma regra 
+formalizada.
+FACTUAL
+A resposta afirma algo 
+sem evidência.
+ESPECIFICAÇÃO
+A regra formal não 
+representa bem a 
+intenção.
+Lógica → regras | Evidência/dados → fatos | Especialista de domínio → especificação
+
+=== PAGINA 54 ===
+Sistema tradicional × LLM × sistema híbrido
+TRADICIONAL
+Dados + regras → 
+decisão
+LLM ISOLADA
+Prompt → LLM → 
+resposta
+HÍBRIDO
+LLM → resposta → 
+validadores
+A LLM não precisa executar internamente nossas fórmulas. Nesta atividade, a lógica 
+funciona como representação/critério externo de verificação.
+
+=== PAGINA 55 ===
+Por que Lógica Proposicional na era da IA?
+REPRESENTAR ANALISAR VERIFICAR INTEGRAR
+O profissional de IA não precisa apenas gerar respostas: precisa compreender 
+requisitos, restrições, critérios e mecanismos de avaliação quando essas 
+propriedades podem ser formalizadas.
+GERAR ≠ VERIFICAR
+
+=== PAGINA 56 ===
+Limite da validação lógica
+Se C=V, T=V e B=F , as regras conhecidas podem estar satisfeitas.
+Isso NÃO prova automaticamente E=V.
+Pode haver requisitos não formalizados. Formulação segura: “a decisão não viola as 
+restrições conhecidas” .
+
+=== PAGINA 57 ===
+Fechamento do Encontro 02
+POLÍTICA → PROPOSIÇÕES → FÓRMULA → TABELA-VERDADE → VALIDAÇÃO
+LÓGICA = REPRESENTAR + ANALISAR + VERIFICAR
+Próximo encontro: semântica, tabelas sistemáticas, tautologia, contradição, 
+satisfatibilidade, equivalência e validação.
+
+=== PAGINA 58 ===
+Referências essenciais
+Open Logic Project — openlogicproject.org
+forall x: Calgary — forallx.openlogicproject.org
+Russell & Norvig — Artificial Intelligence: A Modern Approach — aima.cs.berkeley.edu
+NIST AI Risk Management Framework — nist.gov/itl/ai-risk-management-framework
+NIST AI 600-1 — Generative AI Profile — doi.org/10.6028/NIST.AI.600-1
+NIST AI Resource Center — airc.nist.gov

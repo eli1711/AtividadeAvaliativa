@@ -1,0 +1,33 @@
+ENTRADA
+hipotese(c01,sobrecarga,r01).
+hipotese(c02,mecanica,r02).
+hipotese(c03,hidraulica,r03).
+hipotese(c04,H,R).
+;
+hipotese(c05,sobrecarga,r01).
+hipotese(c06,hidraulica,r03).
+hipotese(c07,H,R).
+;
+;
+halt.
+
+SAÍDA REAL
+true.
+
+true.
+
+true.
+
+H = mecanica,
+R = r02 H = condicao_critica,
+R = r04.
+
+false.
+
+false.
+
+H = mecanica,
+R = r02 H = hidraulica,
+R = r03 H = condicao_critica,
+R = r04.
+

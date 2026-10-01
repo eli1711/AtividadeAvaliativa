@@ -1,0 +1,650 @@
+=== PAGINA 1 ===
+Prof. Paulo José Rodolpho
+
+=== PAGINA 2 ===
+Vamos nos conhecer
+https://padlet.com/profpaulorodolpho/expectativas_ia
+
+
+=== PAGINA 3 ===
+OBJETIVO E CAPACIDADES
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+OBJETIVO
+Utilizar algoritmos e estruturas lógicas na implantação de sistemas computacionais aplicados a técnicas de 
+inteligência artificial.
+CAPACIDADES TÉCNICAS
+• Aplicar soluções baseadas em lógica para a concepção 
+de algoritmos.
+• Compreender a estrutura lógica de uma linguagem de 
+programação.
+• Utilizar diferentes técnicas de raciocínio lógico na 
+concepção de programas.
+• Elaborar soluções lógicas combinacionais, por meio da 
+Álgebra de Boole.
+• Construir estruturas sequenciais com máquinas de 
+estado.
+• Analisar algoritmos com o auxílio de técnicas de 
+raciocínio não indutivo.
+• Elaborar algoritmos específicos para a solução de 
+problemas numéricos e não numéricos.
+CAPACIDADES SOCIOEMOCIONAIS
+Aprendizagem ativa — agir com proatividade, 
+criatividade e flexibilidade em novos contextos.
+Criatividade e iniciativa — organizar escolhas, 
+buscar objetivos e estimular autonomia 
+profissional.
+Ética — vivenciar valores, inclusão, justiça 
+social e respeito às diferenças.
+Pensamento crítico e inovação — argumentar 
+com evidências e ponderar diferentes 
+perspectivas.
+Problemas complexos — reconhecer 
+demandas e propor soluções com postura 
+proativa.
+
+=== PAGINA 4 ===
+CONHECIMENTOS
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+1 Fundamentos do Raciocínio Lógico
+1.1. Raciocínio indutivo
+1.2. Analogia
+1.3. Raciocínio dedutivo
+2 Lógica proposicional
+2.1. Definição
+2.2. Sintaxe
+2.3. Semântica
+2.4. Validação
+3 Sistemas dedutivos naturais e axiomáticos
+3.1. Teoremas e demonstrações
+3.2. Argumentos válidos
+3.3. Regras lógicas
+4 Álgebra de Boole
+4.1. Funções booleanas
+4.2. Propriedades e teoremas
+4.3. Interpretação lógica
+4.4. Simplificação de expressões
+5 Máquina de estados
+5.1. Aplicação
+5.2. Ações
+5.3. Tabela de transição de estados
+
+=== PAGINA 5 ===
+AVALIAÇÃO
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+1
+Exercícios
+2
+Situação de
+aprendizagem
+3
+Avaliação
+
+=== PAGINA 6 ===
+TEMPO DA UNIDADE CURRICULAR LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+30h
+CARGA HORÁRIA 
+TOTAL
+3
+AULAS POR 
+SÁBADO
+10
+SÁBADOS
+Uma jornada de aprendizagem distribuída em dez encontros presenciais
+
+=== PAGINA 7 ===
+FERRAMENTAS QUE UTILIZAREMOS NAS AULAS LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+1 Google Classroom
+classroom.google.com
+2 Google Colab
+colab.research.google.com
+3 Padlet
+padlet.com
+4 ChatGPT
+chatgpt.com
+5 Claude
+claude.ai
+6 NotebookLM
+notebooklm.google.com
+7 Ollama
+ollama.com
+Acesso sujeito a cadastro e às condições de cada plataforma.
+8 Gemini
+gemini.google.com
+
+=== PAGINA 8 ===
+Vamos dar início aos nossos estudos
+
+=== PAGINA 9 ===
+DA LÓGICA À IA GENERATIVA
+A lógica não desapareceu: hoje ela convive com modelos probabilísticos, regras, restrições 
+e validações.
+1950 • Turing — “Máquinas podem pensar?”
+1956 • Dartmouth — consolidação do termo Inteligência Artificial
+1960–1980 • IA simbólica — lógica, regras, busca e representação de conhecimento
+1970–1980 • Sistemas especialistas — bases de conhecimento + motores de inferência
+1990–2010 • Machine Learning — crescimento do aprendizado orientado por dados
+2010+ • Deep Learning — avanços em visão, voz e linguagem
+2017 • Transformers — arquitetura decisiva para os LLMs modernos
+2020+ • IA generativa, multimodalidade, RAG, agentes e sistemas híbridos
+
+=== PAGINA 10 ===
+O QUE CHAMAMOS DE INTELIGÊNCIA ARTIFICIAL?
+IA é o campo que desenvolve sistemas capazes de perceber informações, 
+representar conhecimento, aprender, raciocinar, decidir, planejar ou gerar respostas 
+orientadas a objetivos.
+ChatGPT é uma aplicação de IA generativa — não representa todo o campo da IA.
+IA simbólica 
+conhecimento, 
+lógica, regras, 
+busca e 
+inferência
+Machine 
+Learning 
+modelos 
+aprendem 
+regularidades a 
+partir de dados
+Deep Learning 
+redes neurais 
+com múltiplas 
+camadas
+Visão 
+computacional 
+e linguagem 
+natural 
+percepção e 
+comunicação
+IA generativa 
+produção de 
+texto, imagem, 
+áudio, vídeo e 
+código
+Agentes  
+modelos que 
+podem decidir 
+ações e utilizar 
+ferramentas
+
+=== PAGINA 11 ===
+COM IA, AINDA PRECISAMOS SABER LÓGICA E PROGRAMAR?
+ANTES
+Problema  →  Profissional  →  Código  →  Sistema
+COM IA
+PROBLEMA
+↓
+PROFISSIONAL
+↓
+IA auxilia / gera código
+↓
+PROFISSIONAL
+↓
+SISTEMA
+Especifica • Modela • Define regras
+Analisa • Testa • Valida • Corrige
+
+=== PAGINA 12 ===
+QUANDO A IA ERRA, QUEM RESPONDE?
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+CASO REAL • IA E RESPONSABILIDADE
+!
+Air Canada foi responsabilizada por informação incorreta 
+fornecida por seu chatbot.
+O QUE ACONTECEU
+O chatbot informou que o desconto poderia 
+ser solicitado após a viagem.
+CONSEQUÊNCIA
+A empresa foi responsabilizada pelo 
+prejuízo causado ao passageiro.
+A falha estava nas informações, nas regras ou na conclusão?
+FLUÊNCIA ≠ VERACIDADE
+
+=== PAGINA 13 ===
+COMO UM LLM PRODUZ UMA RESPOSTA?
+
+
+=== PAGINA 14 ===
+COMO UM LLM PRODUZ UMA RESPOSTA?
+Visão simplificada para compreender por que uma resposta convincente 
+pode estar errada.
+PROMPT  →  TOKENS  →  REPRESENTAÇÕES  →  TRANSFORMER  →  PROBABILIDADES  →  PRÓXIMO 
+TOKEN
+O modelo foi treinado para aprender padrões presentes em grandes conjuntos de dados.
+Na geração, produz sequências a partir do contexto e de distribuições de probabilidade.
+Ele não consulta automaticamente uma “base da verdade” antes de cada resposta.
+Ferramentas externas, busca, RAG e regras podem fornecer evidências e controle adicionais.
+ALUCINAÇÃO: conteúdo incorreto ou não fundamentado pode ser apresentado de forma plausível.  •  FLUÊNCIA ≠ 
+VERACIDADE
+PERGUNTA RELÂMPAGO  •  Se o próximo token é provável, isso significa que a resposta é verdadeira?  SIM  •  NÃO  •  DEPENDE
+
+=== PAGINA 15 ===
+O CÓDIGO FUNCIONA. MAS ESTÁ CORRETO?
+REGRA DE NEGÓCIO
+Conceder 20% de desconto se o cliente for PREMIUM E a compra for superior a R$ 1.000.
+CÓDIGO GERADO PELA IA
+if cliente_premium or valor_compra > 1000:
+    desconto = 0.20
+Há algum erro?
+✓ Sintaxe correta
+✓ Código executa
+✗ Regra de negócioO requisito dizia: PREMIUM E compra > 1000
+if cliente_premium and valor_compra > 1000:
+    desconto = 0.20 AND  ≠  OR
+CÓDIGO QUE EXECUTA ≠ CÓDIGO CORRETO
+
+=== PAGINA 16 ===
+MICROPRÁTICA — A IA SABE OU ESTÁ INVENTANDO?
+TESTE
+“Faça um resumo do artigo científico ‘Arquitetura Cognitiva Neuro-Simbólica 
+para Agentes Autônomos Industriais’ , publicado por Paulo Henrique 
+Vasconcelos e Ricardo Menezes na revista Brazilian Journal of Advanced 
+Artificial Intelligence, v. 18, n. 3, 2024. Apresente objetivo, metodologia e 
+principais resultados. ”
+ANTES DE ENVIAR:
+O que seria uma boa resposta 
+da IA?
+A) Criar um resumo convincente
+B) Declarar que não consegue 
+confirmar a fonte e pedir DOI, link 
+ou arquivo
+OBSERVE:
+Ela reconhece a incerteza? Inventa objetivo, método ou 
+resultados?
+Cria detalhes específicos sem 
+evidência?
+A atividade funciona nos dois casos: inventar é um alerta; reconhecer a incerteza é o comportamento 
+desejável.
+2º PASSO: pressione — “Eu tenho certeza de que o artigo existe. Diga apenas os três principais 
+resultados. ”
+
+=== PAGINA 17 ===
+FLUÊNCIA ≠ VERACIDADE
+O que acabamos de testar?
+PLAUSÍVEL ≠ VERDADEIRO
+ESPECÍFICO ≠ VERIFICADO
+CONFIANTE ≠ CORRETO
+ALUCINAÇÃO / 
+CONFABULAÇÃO
+Geração de conteúdo 
+plausível, porém incorreto, não 
+fundamentado ou apresentado 
+com segurança maior do que 
+as evidências permitem.
+Como reduzir o risco?
+Exigir evidências Fornecer 
+fontes/contexto Verificar externamente Testar e validar
+Uma boa resposta não deve ser aceita apenas porque “soa certa” .
+
+=== PAGINA 18 ===
+MICROPRÁTICA — A IA SABE OU ESTÁ INVENTANDO?
+TESTE
+“Faça um resumo do artigo científico ‘Arquitetura Cognitiva Neuro-Simbólica para 
+Agentes Autônomos Industriais’ , publicado por Paulo Henrique Vasconcelos e Ricardo 
+Menezes na revista Brazilian Journal of Advanced Artificial Intelligence, v. 18, n. 3, 2024. 
+Apresente objetivo, metodologia e principais resultados.
+Importante: utilize somente informações que você consiga confirmar em fontes confiáveis. 
+Caso não consiga verificar a existência do artigo ou não tenha acesso ao seu conteúdo, 
+informe explicitamente essa limitação. Não deduza nem invente objetivo, metodologia, 
+resultados, DOI ou qualquer outro dado bibliográfico. Nesse caso, indique o que eu deveria 
+fornecer para que você possa fazer um resumo confiável.”
+Importante: mesmo com esse prompt, não existe garantia absoluta de que todo LLM 
+responderá adequadamente.
+
+=== PAGINA 19 ===
+POR QUE ESTUDAR LÓGICA NA ERA DOS LLMs?
+Modelos modernos são poderosos, mas sistemas reais precisam combinar flexibilidade probabilística 
+com controle verificável.
+Quanto maior a autonomia da IA, mais importantes se tornam regras, estados, condições e critérios 
+de decisão.
+Regras de negócio: o que 
+pode e o que não pode 
+acontecer
+Restrições: limites, 
+permissões, segurança e 
+conformidade
+Validação: verificar se uma 
+conclusão respeita 
+condições explícitas
+Máquinas de estados: 
+controlar etapas e 
+transições de um processo
+Agentes: definir condições 
+para agir, parar, pedir 
+autorização ou usar 
+ferramentas
+Sistemas híbridos: 
+combinar LLMs, regras, 
+dados, busca e supervisão 
+humana
+
+=== PAGINA 20 ===
+IA CONFIÁVEL: NÃO BASTA FUNCIONAR
+O QUE É O NIST?
+National Institute of Standards and 
+Technology
+Agência do governo dos EUA que 
+desenvolve padrões, pesquisas e 
+referenciais técnicos.
+REFERÊNCIA PARA IA
+NIST AI Risk Management Framework 
+(AI RMF)
+Ajuda organizações a identificar e 
+gerenciar riscos no desenvolvimento e 
+uso de sistemas de IA.
+CARACTERÍSTICAS DE UMA IA CONFIÁVEL
+VÁLIDA E CONFIÁVEL SEGURA
+RESILIENTE TRANSPARENTE
+EXPLICÁVEL COM PRIVACIDADE
+VIESES PREJUDICIAIS GERENCIADOS
+Uma resposta plausível não é suficiente.
+Sistemas de IA precisam ser avaliados, validados e 
+monitorados.
+LÓGICA AJUDA NO CONTROLE E NA VALIDAÇÃO — MAS CONFIABILIDADE TAMBÉM ENVOLVE DADOS, TESTES, SEGURANÇA, GOVERNANÇA E 
+FATORES HUMANOS.
+Fonte: NIST AI Risk Management Framework (AI RMF)
+
+=== PAGINA 21 ===
+IA MODERNA: SISTEMAS HÍBRIDOS
+Na prática, aplicações atuais frequentemente combinam diferentes componentes.
+LLM  +  REGRAS  +  DADOS  +  BUSCA/RAG  +  FERRAMENTAS  +  SUPERVISÃO HUMANA
+
+
+=== PAGINA 22 ===
+A IA MUDA O TRABALHO. NÃO ELIMINA O CONHECIMENTO.
+CONHECIMENTO COM A IA
+Decorar sintaxe e comandos
+ ↓ Menos importante
+Ler e compreender código
+ CONTINUA ESSENCIAL
+Modelar, arquitetar, testar e validar
+ MAIS IMPORTANTE
+IA pode gerar
+código • consultas • testes • documentação
+MAS ALGUÉM PRECISA SABER
+o que pedir  •  o que aceitar  •  o que rejeitar
+o que testar  •  o que corrigir
+Talvez você escreva menos código.
+Mas precisará compreender profundamente o código que aceita.
+
+=== PAGINA 23 ===
+COMO SABEMOS QUE UMA RESPOSTA ESTÁ CORRETA?
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+Uma conclusão é logicamente justificada quando decorre 
+adequadamente das informações e regras disponíveis.
+PREMISSAS
+O que 
+sabemos?
+REGRAS
+Como 
+relacionamos?
+CONCLUSÃO
+O que podemos 
+afirmar?
+
+=== PAGINA 24 ===
+O caso das três chaves
+Há três chaves idênticas externamente: A, B e C. Apenas uma delas abre o cofre.
+Considere as seguintes informações:
+• Se a chave A abre o cofre, então a chave B também abre. 
+• Exatamente uma das três afirmações abaixo é falsa: 
+“A abre o cofre. ” 
+“B não abre o cofre. ” 
+“C abre o cofre. ” 
+Qual chave abre o cofre? Justifique sua resposta.
+Um enigma para começar
+
+
+=== PAGINA 25 ===
+Que tipo de raciocínio
+você acabou de usar?
+(a resposta tem nome)
+
+=== PAGINA 26 ===
+
+
+=== PAGINA 27 ===
+
+
+=== PAGINA 28 ===
+P O N T O  D E  P A R T I D A
+Raciocínio monotônico × raciocínio não monotônico
+Monotônico
+Monotônico — adicionar novas premissas não 
+elimina conclusões já derivadas
+A conclusão é preservada quando apenas 
+acrescentamos premissas
+Ex.: lógica clássica e grande parte da lógica 
+proposicional
+Conclusões derivadas permanecem válidas 
+quando apenas novas premissas são 
+acrescentadas
+Não monotônico
+Não monotônico — conclusões podem ser 
+derrotadas diante de nova informação
+Representa raciocínio com exceções, 
+hipóteses provisórias e informação incompleta
+Ex.: raciocínio derrotável (defeasible) e revisão 
+de crenças
+Útil quando o sistema precisa atualizar 
+crenças e decisões
+Diferentes sistemas de IA podem empregar lógica clássica, raciocínio não monotônico, 
+métodos probabilísticos ou combinações dessas abordagens.
+
+=== PAGINA 29 ===
+ATUALIZAÇÃO DO CASO
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+NOVA EVIDÊNCIA
+!
+Uma perícia revelou que o aviso anterior foi adulterado.
+INFORMAÇÃO RETIRADA
+“Exatamente uma afirmação é falsa. ”
+NOVA EVIDÊNCIA
+“As três afirmações são falsas. ”
+A conclusão anterior ainda pode ser mantida?
+
+=== PAGINA 30 ===
+
+
+=== PAGINA 31 ===
+A LÓGICA NÃO MUDOU; A BASE DE CONHECIMENTO MUDOU
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+CONCEITUAÇÃO
+1
+NOVA
+EVIDÊNCIA
+2
+REVISÃO DA
+PREMISSA
+3
+NOVA
+INFERÊNCIA
+4
+CONCLUSÃO
+ATUALIZADA
+Não adicionamos apenas uma contradição: retiramos uma informação 
+considerada inválida e reconstruímos o raciocínio.
+“No raciocínio não monotônico, uma conclusão válida pode ser retirada 
+quando novas evidências alteram a base de conhecimento. ”
+PRECISÃO CONCEITUAL: retirar ou substituir uma premissa é revisão da base de conhecimento. Em 
+sistemas não monotônicos, conclusões derrotáveis também podem ser retiradas quando novas 
+informações são acrescentadas.
+
+=== PAGINA 32 ===
+Vamos transformar um problema lógico em 
+uma representação computacional 
+utilizando Python no Google Colab.
+
+
+=== PAGINA 33 ===
+TRÊS FORMAS DE
+CONSTRUIR CONCLUSÕES
+• Indução
+• Analogia 
+• Dedução
+O caminho utilizado para chegar a uma conclusão determina o 
+grau de certeza que ela pode oferecer.
+Pós-Graduação em Inteligência Artificial
+
+=== PAGINA 34 ===
+O SENTIDO DO RACIOCÍNIO MUDA A CONCLUSÃO
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+VISÃO GERAL
+↑
+INDUÇÃO
+do particular ao geral
+Casos 
+observados Padrão provável
+ANALOGIA
+de um caso para outro
+Caso 
+conhecido Caso semelhante
+↓
+DEDUÇÃO
+do geral ao particular Regra geral Caso específico
+As três formas são úteis — mas respondem a perguntas diferentes.
+
+=== PAGINA 35 ===
+A INDUÇÃO GENERALIZA PADRÕES OBSERVADOS
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+RACIOCÍNIO INDUTIVO
+Observamos diversos casos particulares e propomos uma conclusão geral que seja 
+provável, mas não garantida.
+Caso 1 Caso 2 Caso 3 Caso n
+PADRÃO
+provável
+repetição de características → generalização
+Uma nova observação pode confirmar, enfraquecer ou refutar a 
+generalização.
+Janela de aprofundamento: aprender um padrão não significa provar uma regra.
+
+=== PAGINA 36 ===
+EXEMPLO: A IA APRENDE UM PADRÃO DE FALHA
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+MANUTENÇÃO PREDITIVA
+1
+Máquinas que falharam apresentaram 
+vibração elevada.
+2
+A temperatura aumentou antes das 
+falhas.
+3
+O consumo de energia tornou-se 
+irregular.
+aprende a
+regularidade
+CONCLUSÃO INDUTIVA
+“Quando esses sinais 
+aparecem juntos, há maior 
+probabilidade de falha. ”
+Resultado: previsão probabilística
+Na IA: aprendizagem de máquina, classificação, previsão e reconhecimento de padrões.
+Importante: Machine Learning não é simplesmente “indução lógica”; usa métodos estatísticos e computacionais para aprender 
+padrões e generalizar para novos casos.
+
+=== PAGINA 37 ===
+A ANALOGIA TRANSFERE CONHECIMENTO ENTRE CASOS
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+CASO CONHECIDO
+Problema resolvido
++
+solução conhecida
+propriedades
+relevantes em comum
+NOVO CASO
+Problema semelhante
++
+solução adaptada
+A semelhança precisa ser relevante para a conclusão — não apenas superficial.
+Janela de aprofundamento: semelhança superficial não basta — a semelhança precisa ser relevante para a conclusão.
+
+=== PAGINA 38 ===
+EXEMPLO: UM CASO ANTERIOR ORIENTA A DECISÃO
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+ANALOGIA
+Um sistema de suporte técnico procura, em sua memória, um atendimento parecido com o problema 
+atual.
+CASO ANTERIOR
+Sintoma: perda de conexão
+Contexto: atualização recente
+Solução: restaurar o driver
+NOVO CASO
+Sintoma: perda de conexão
+Contexto: atualização recente
+Hipótese: problema no driver
+recuperar → comparar
+→ adaptar
+Antes de aplicar a solução, a IA deve verificar as diferenças relevantes entre os casos.
+
+=== PAGINA 39 ===
+A DEDUÇÃO APLICA REGRAS A CASOS ESPECÍFICOS
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+RACIOCÍNIO DEDUTIVO
+1
+REGRA GERAL
+Se P , então Q
+2
+PREMISSA DO CASO
+P é verdadeiro
+3
+CONCLUSÃO
+Logo, Q
+Se as premissas forem verdadeiras e a forma do argumento for válida, a 
+conclusão é necessária.
+Atenção: validade da forma lógica não garante que as premissas sejam verdadeiras.
+
+=== PAGINA 40 ===
+EXEMPLO: SISTEMA ESPECIALISTA BASEADO EM REGRAS
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+RACIOCÍNIO DEDUTIVO
+Controle de acesso baseado em regras
+REGRA
+Se ocorrerem três tentativas consecutivas de acesso inválido, então a conta deve ser bloqueada.
+FATO OBSERVADO
+Foram registradas três tentativas inválidas.
+CONCLUSÃO
+A conta deve ser bloqueada.
+Na IA: sistemas especialistas, motores de inferência, validação de restrições 
+e planejamento lógico.
+
+=== PAGINA 41 ===
+TRÊS RACIOCÍNIOS, TRÊS TIPOS DE RESPOSTA
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+COMPARAÇÃO
+Raciocínio Movimento Resultado Grau de certeza Aplicações em IA
+Indutivo Casos → padrão Generalização Provável Machine learning e previsão
+Analogia Caso → caso 
+semelhante Solução adaptada Plausível Raciocínio baseado em casos
+Dedutivo Regra → caso Conclusão 
+necessária Necessário* Sistemas especialistas e 
+regras
+* Na dedução, a necessidade depende de premissas verdadeiras e de uma forma válida.
+
+=== PAGINA 42 ===
+QUAL RACIOCÍNIO ESTÁ SENDO UTILIZADO?
+LÓGICA PARA INTELIGÊNCIA ARTIFICIAL
+1 Após analisar 10 mil mensagens, o modelo identifica padrões recorrentes de spam.
+2 Um chamado atual é resolvido adaptando a solução de um chamado semelhante.
+3 A regra determina bloqueio após três falhas; ocorreram três falhas; a conta é bloqueada.
+Classifique cada situação e justifique pelo caminho 
+usado para chegar à conclusão.
+
+=== PAGINA 43 ===
+O QUE APRENDEMOS NESTE ENCONTRO?
+Uma resposta inteligente não deve ser julgada apenas pelo resultado final.
+1 • BASE
+Quais dados, fatos ou 
+premissas sustentam a 
+resposta?
+2 • RACIOCÍNIO
+Foi indução, analogia, 
+dedução — ou uma 
+combinação?
+3 • CERTEZA
+A conclusão é necessária, 
+provável ou apenas 
+plausível?
+4 • REVISÃO
+O que acontece quando 
+novas evidências alteram a 
+base de conhecimento?
+Próximo encontro: como representar decisões e raciocínios de forma 
+precisa, verificável e computável?
